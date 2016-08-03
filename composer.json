@@ -3,7 +3,7 @@
     "description": "Inspiring You The Next",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "version" : "1.0.0",
-    "type" : "Experimental Project Of UROSD Lab",
+    "type" : "project",
     "author": [
         {
             "name": "Md. Ainul Moin Noor",
