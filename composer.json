@@ -2,7 +2,6 @@
     "name": "elham/elham",
     "description": "Inspiring You The Next",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
-    "version" : "1.0.0",
     "type" : "project",
     "author": [
         {
