@@ -8,7 +8,7 @@ This framework is just the reflection of our thoughts. Hope that make sense.
 ```sh
 $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
 ```
-- Then download the fresh copy of Elham from our official [Gitlab](git@gitlab.com:chandan07cse/elham.git) Repository
+- Then download the fresh copy of Elham from our official [Github](git@github.com:chandan07cse/Elham.git) Repository
 ```sh
 $ git clone git@gitlab.com:chandan07cse/elham.git your_project_name
 ```
