@@ -1,0 +1,82 @@
+<?php
+namespace Elham\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use duncan3dc\Laravel\BladeInstance;
+
+class BaseController
+{
+
+    public function plainView(Request $request)
+    {
+        extract($request->attributes->all(), EXTR_SKIP);
+        ob_start();
+        // We follow the naming convention. The name of the route = the name of the file
+        include sprintf(__DIR__ . '/../../app/Views/%s.php', $_route);
+        //$val = sprintf(__DIR__ . '/../../app/Views/%s.twig', $_route);
+        return new Response(ob_get_clean());
+
+    }
+
+    public function twigView($template,$params)
+    {
+        $loader = new \Twig_Loader_Filesystem(__DIR__.'/../Views');
+        $twig = new \Twig_Environment($loader,array(
+            'debug' => true));
+        $twig->addExtension(new \Twig_Extension_Debug());
+
+        echo $twig->render($template,$params);
+    }
+
+    public function bladeView($template,$params=[])
+    {
+        $blade = new BladeInstance(__DIR__.'/../Views', __DIR__."/cache");
+
+        echo  $blade->render($template,$params);
+    }
+
+    public function redirect($route,$errorBag,$oldInputValues)
+    {
+        if($errorBag==null && $oldInputValues==null)
+            header('location:'.$route);
+        elseif($errorBag!=null && $oldInputValues==null)
+            header('location:'.$route.'?errorBag='.json_encode($errorBag));
+        elseif($errorBag==null && $oldInputValues!=null)
+            header('location:'.$route.'?oldInputs='.json_encode($oldInputValues));
+        else
+        header('location:'.$route.'?errorBag='.json_encode($errorBag).'&oldInputs='.json_encode($oldInputValues));
+
+    }
+
+    public function SendMailUsingSendgrid($from,$to,$subject,$message,$template=null,$data=[],$attachment=null)
+    {
+        $sendgrid_username = getenv('MAIL_USERNAME');
+        $sendgrid_password = getenv('MAIL_PASSWORD');
+
+        $template = file_get_contents(__DIR__.'/../Views/'.$template);
+        if($attachment!=null) {
+            $extension = strstr(strtolower($attachment), ".");
+            $attachment = __DIR__ . '/../Views/' . $attachment;
+        }
+        $sendgrid = new \SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
+        $email    = new \SendGrid\Email();
+        $email->addTo($to)->
+        setFrom($from)->
+        setSubject($subject)->
+        setText($message)->
+        setHtml($template);
+        foreach($data as $key=>$value)
+        {
+            $email->addSubstitution('%'.$key.'%',array($value));
+        }
+//        addHeader('X-Sent-Using', 'SendGrid-API')->
+//        addHeader('X-Transport', 'web')->
+        if($attachment!=null)
+         $email->addAttachment($attachment, 'attachment'.$extension);
+
+        return $sendgrid->send($email);
+    }
+
+
+}
