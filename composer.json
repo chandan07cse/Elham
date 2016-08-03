@@ -32,7 +32,6 @@
         "fzaninotto/faker": "^1.6",
         "psy/psysh": "@stable"
     },
-    "minimum-stability": "dev",
     "autoload":{
         "psr-4":{
             "Elham\\":"app/",
