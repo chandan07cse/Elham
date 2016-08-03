@@ -24,7 +24,6 @@
         "sendgrid/sendgrid": "2.1.1",
         "sendgrid/smtpapi": "0.0.1",
         "swiftmailer/swiftmailer": "v5.0.3"
-
     },
     "require-dev":{
         "fzaninotto/faker": "^1.6",
