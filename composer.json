@@ -11,7 +11,7 @@
     ],
 
     "require": {
-        "elham/elham": "dev-master",
+        "elham/elham": "1.0.0",
         "symfony/class-loader": "3.1.*",
         "symfony/http-foundation": "3.1.*",
         "symfony/routing": "3.1.*",
