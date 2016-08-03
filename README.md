@@ -1,6 +1,6 @@
-# # Elham - Inspiring You The Next PHP Framework
-First of all, I would like to say, We don't like to reinvent the wheel. Instead we would like to build our car by assembling the already invented wheels. 
-This framework is just the reflection of our thoughts. Hope that make sense.
+# # Elham - Inspiring You The Next 
+First of all, I would like to say, I don't like to reinvent the wheel. Instead i would like to build my car by assembling the already invented wheels. 
+This is just the reflection of my thoughts. Hope that make sense.
 ### Version
 1.0.0
 ### Installation
@@ -8,7 +8,7 @@ This framework is just the reflection of our thoughts. Hope that make sense.
 ```sh
 $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
 ```
-- Then download the fresh copy of Elham from our official [Github](git@github.com:chandan07cse/Elham.git) Repository
+- Then download the fresh copy of Elham from our official [Gitlab](git@gitlab.com:chandan07cse/elham.git) Repository
 ```sh
 $ git clone git@gitlab.com:chandan07cse/elham.git your_project_name
 ```
@@ -55,4 +55,10 @@ We can do that by running into terminal
 $ sudo npm install gulp-clean-css --save-dev
 ```
 - We'll discuss more about gulp & other functionalities in our official documentation of [Elham](http://elham.urosd.com). 
-
+- Now to run your first application of Elham, cd into your project and run through php command like below
+```sh
+$ cd your_project_name
+$ php -S localhost:8000
+```
+- Now hit your browser by localhost:8000
+ 
