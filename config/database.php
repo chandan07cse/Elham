@@ -54,7 +54,6 @@ class database{
             $path = __DIR__.'..\db\database.sqlite';
             $this->pdo = new \PDO('sqlite:'.$path);
         }
-
         return $this->pdo;
     }
 }
