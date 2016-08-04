@@ -3,13 +3,13 @@
     "description": "Inspiring You The Next",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type" : "project",
+    "minimum-stability": "stable",
     "author": [
         {
             "name": "Md. Ainul Moin Noor",
             "homepage": "http://elham.urosd.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "symfony/class-loader": "3.1.*",
         "symfony/http-foundation": "3.1.*",
