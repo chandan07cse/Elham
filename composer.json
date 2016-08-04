@@ -9,7 +9,7 @@
             "homepage": "http://elham.urosd.com"
         }
     ],
-
+    "minimum-stability": "stable",
     "require": {
         "symfony/class-loader": "3.1.*",
         "symfony/http-foundation": "3.1.*",
