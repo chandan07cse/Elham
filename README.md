@@ -82,7 +82,7 @@ $       public function up()
 $       {
 $            $students = $this->table('students');
 $                    $students->addColumn('name','string',['length'=>100])
-$                             ->addColumn('created_at','datetime')
+$                             ->addColumn('roll','string')
 $                             ->create();
 $       }
 $       public function down()
