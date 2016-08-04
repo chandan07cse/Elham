@@ -60,8 +60,3 @@ $ cd your_project_name
 $ php -S localhost:8000
 ```
 - Now hit your browser by localhost:8000
-<<<<<<< HEAD
- 
-=======
- 
->>>>>>> 53fd7b71abf974083e05e4c5810ecfd75e773599
