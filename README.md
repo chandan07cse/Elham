@@ -47,7 +47,7 @@ $ phinx init
 ```sh
 $ environments:
 $ default_database: development
-$  development:
+$ development:
           adapter: sqlite
           host: localhost
           name: db/database.sqlite
