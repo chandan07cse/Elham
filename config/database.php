@@ -30,7 +30,7 @@ class database{
         elseif(getenv('DB_DRIVER')=='sqlite')
             $this->capsule->addConnection([
                 'driver'=>'sqlite',
-                'database'=> __DIR__ . '../db/database.sqlite',
+                'database'=> __DIR__.'/../db/database.sqlite',
                 'prefix'=>'',
                 ]);
 

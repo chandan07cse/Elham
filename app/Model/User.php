@@ -10,7 +10,7 @@ use Carbon\Carbon;
 use config\PDO;//For PDO Queries
 use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
-class Form extends Eloquent{
+class User extends Eloquent{
     //use PDO;
     protected $fillable=['username','email','password','image'];//remember the format
     protected $userName,$email,$passWord,$imageName;
@@ -71,5 +71,10 @@ class Form extends Eloquent{
 //           'image'=>'images/me.jpg'
 //       ]);
         return $command ? true : false;
+    }
+
+    public function getAll()
+    {
+        return User::all()->toArray();
     }
 }
