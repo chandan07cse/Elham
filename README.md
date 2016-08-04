@@ -14,7 +14,7 @@ $ git clone git@github.com:chandan07cse/Elham.git your_project_name
 - Now cd into your_project_name & install the dependencies
 ```sh
 $ cd your_project_name
-$ composer install
+$ composer install --quiet
 ```
 - To check the list of dependencies Elham relies, run the command
 ```sh
