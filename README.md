@@ -27,10 +27,7 @@ $ php -S localhost:8000
 ```sh
 $ composer info
 ```
-- After that rename or copy(preferred) .env.sample to .env 
-```sh
-$ sudo cp .env.sample .env
-```
+
 - As Elham used [Phinx](https://phinx.org/) for migrations, so to use phinx command just run from the terminal
 ```sh
 $ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
