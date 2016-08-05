@@ -1,6 +1,6 @@
 <?php
 
-    // Load the autoloader
+    // Load the auto loader
     require_once __DIR__ . '/../vendor/autoload.php';
 
     use Symfony\Component\HttpFoundation\Request;
@@ -10,15 +10,19 @@
     use Symfony\Component\HttpKernel\Controller\ControllerResolver;
     use Elham\Elham\Core;
     use config\database;
+
     $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
     $dotenv->load();
 
     $db = new database();
-
-    $db->connectThroughCapsule();//init Eloquent
-    $db->connectThroughPDO();//init PDO
-
-
+    if(getenv('DB_INTERACT')=='Eloquent')
+        $db->connectThroughCapsule();//init Eloquent & Query Builder Throuh Capsule
+    elseif(getenv('DB_INTERACT')=='PDO')
+        $db->connectThroughPDO();//init PDO
+    elseif (getenv('DB_INTERACT')=='Eloquent&PDO') {
+        $db->connectThroughCapsule();
+        $db->connectThroughPDO();
+    }
     // Form the request from all possible sources - $_GET, $_POST, $_FILE, $_COOKIE, $_SESSION
     $request = Request::createFromGlobals();
 

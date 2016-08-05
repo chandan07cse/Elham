@@ -53,13 +53,7 @@ class database{
         }
         elseif(getenv('DB_DRIVER')=='sqlite'){
             $path =  __DIR__.'..\db\database.sqlite';
-            try
-            {
-                $this->pdo = new \PDO('sqlite:'.$path);
-            }catch(Exception $e){
-                $e->getMessage();
-            }
-
+            $this->pdo = new \PDO('sqlite:'.$path);
         }
         return $this->pdo;
     }

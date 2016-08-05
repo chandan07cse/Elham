@@ -16,7 +16,7 @@ $ git clone git@github.com:chandan07cse/Elham.git your_project_name
 $ cd your_project_name
 $ composer install --quiet
 ```
-- As Elham ships with sqlite3 database with PDO & Eloquent instance, so if you don't have pdo_sqlite extension enabled, you'll certainly get an PDO driver missing error. To prevent this, just enable it by the following [documentation](http://freakarian.blogspot.com/2016/08/enable-pdo-sqlite-plugin-in-ubuntu.html) 
+- As Elham ships with sqlite3 database with PDO & Eloquent instance, so if you don't have pdo_sqlite extension enabled, you'll certainly get an PDO driver missing error, if you'll be using pdo with sqlite. To prevent this, just enable it by the following [documentation](http://freakarian.blogspot.com/2016/08/enable-pdo-sqlite-plugin-in-ubuntu.html) 
 - Now to run your first application of Elham, cd into your project and run through php command like below
 ```sh
 $ cd your_project_name
