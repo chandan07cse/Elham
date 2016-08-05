@@ -52,7 +52,7 @@ class database{
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         elseif(getenv('DB_DRIVER')=='sqlite'){
-            $path = __DIR__.'..\db\database.sqlite';
+            $path =  __DIR__.'..\db\database.sqlite';
             try
             {
                 $this->pdo = new \PDO('sqlite:'.$path);
