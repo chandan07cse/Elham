@@ -3,6 +3,7 @@ namespace config;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
+use Symfony\Component\Config\Definition\Exception\Exception;
 
 class database{
     protected $capsule,$pdo;
@@ -52,7 +53,13 @@ class database{
         }
         elseif(getenv('DB_DRIVER')=='sqlite'){
             $path = __DIR__.'..\db\database.sqlite';
-            $this->pdo = new \PDO('sqlite:'.$path);
+            try
+            {
+                $this->pdo = new \PDO('sqlite:'.$path);
+            }catch(Exception $e){
+                $e->getMessage();
+            }
+
         }
         return $this->pdo;
     }
