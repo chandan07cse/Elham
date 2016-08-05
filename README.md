@@ -97,7 +97,7 @@ $ phinx migrate
 ```sh
 $ phinx rollback
 ```
-- To explore more about [Phinx](https://phinx.org/),go to their docs. 
+- To explore more about Phinx, please read the [documentation](http://docs.phinx.org/en/latest/). 
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
 $ echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
