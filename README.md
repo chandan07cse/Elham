@@ -20,6 +20,14 @@ $ php -S localhost:8000
 ```sh
 $ composer info
 ```
+- Let run the below command to run elham command
+```sh
+$ echo "alias elham='./elham'" >> ~/.bash_aliases && source ~/.bash_aliases
+```
+- Now you can run elham command through out your project. To check run from the terminal
+```sh
+$ elham
+```
 - Elham provides you the build:controller command
 ```sh
 $ elham build:controller YourController
