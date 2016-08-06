@@ -20,6 +20,25 @@ $ php -S localhost:8000
 ```sh
 $ composer info
 ```
+- Elham provides you the build:controller command
+```sh
+$ elham build:controller YourController
+```
+- Check it by finding it in app/Controller directory of your project.
+- By default elham generates resourceful controller. But if you want you can always make a plain controller by running
+```sh
+$ elham build:controller YourController plain
+```
+- Elham also provides you build:model command
+```sh
+$ elham build:model YourModel
+```
+- Both commands check the existing ones as well for simplicity.
+- Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
+will need to install twig by the following command
+```sh
+$ composer require "twig/twig": "^1.24"
+```
 - As Elham used [Phinx](https://phinx.org/) for migrations, so to use phinx command just run from the terminal
 ```sh
 $ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
