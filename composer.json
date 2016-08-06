@@ -2,8 +2,8 @@
     "name":"elham/elham",
     "description":"Inspiring You The Next",
     "keywords":["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
-    "type" :"project",
-    "minimum-stability":"stable",
+    "type":"project",
+    "license":"MIT",
     "author":[
         {
             "name":"Md. Ainul Moin Noor",
