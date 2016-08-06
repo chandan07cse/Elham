@@ -60,11 +60,11 @@ class database{
 
     public function defaultDB()
     {
-           $this->capsule->addConnection([
-                'driver'=>'sqlite',
-                'database'=> __DIR__.'/../db/database.sqlite',
-                'prefix'=>'',
-            ]);
+       $this->capsule->addConnection([
+            'driver'=>'sqlite',
+            'database'=> __DIR__.'/../db/database.sqlite',
+            'prefix'=>'',
+        ]);
 
         $this->capsule->setEventDispatcher(new Dispatcher(new Container));
         $this->capsule->setAsGlobal();
