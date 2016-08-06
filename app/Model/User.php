@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sysadmin
- * Date: 8/1/16
- * Time: 12:12 PM
- */
 namespace Elham\Model;
 use Carbon\Carbon;
 use config\PDO;//For PDO Queries

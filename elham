@@ -1,0 +1,11 @@
+#! /usr/bin/php
+<?php
+require "vendor/autoload.php";
+use Symfony\Component\Console\Application;
+use commands\Controller\BuildController;
+use commands\Model\BuildModel;
+$app = new Application('Elham Framework','1.0.0');
+$app->add(new BuildController);
+$app->add(new BuildModel());
+$app->run();
+?>

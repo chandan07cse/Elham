@@ -33,7 +33,8 @@
         "psr-4":{
             "Elham\\":"app/",
             "config\\":"config/",
-            "database\\":"database/"
+            "database\\":"database/",
+            "commands\\":"commands/"
                 },
         "classmap": [
             "app/Model/"
