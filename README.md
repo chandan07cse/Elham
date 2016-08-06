@@ -3,31 +3,23 @@ Let's build together by not reinventing the wheel but assembling the wheels to r
 ### Version
 1.0.0
 ### Installation
-- First install composer globally by running the following commands
+- First install composer globally(if you don't have it) by running the following commands
 ```sh
 $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
 ```
-- Then download the fresh copy of Elham from our official [Github](git@github.com:chandan07cse/Elham.git) Repository
+- Then install Elham by the following command
 ```sh
-$ git clone git@github.com:chandan07cse/Elham.git your_project_name
+$ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```
-- Now cd into your_project_name & install the dependencies
+- Now cd into your_project_name & run by the php command
 ```sh
-$ cd your_project_name
-$ composer install --quiet
-```
-- As Elham ships with sqlite3 database with PDO & Eloquent instance, so if you don't have pdo_sqlite extension enabled, you'll certainly get an PDO driver missing error, if you'll be using pdo with sqlite. To prevent this, just enable it by the following [documentation](http://freakarian.blogspot.com/2016/08/enable-pdo-sqlite-plugin-in-ubuntu.html) 
-- Now to run your first application of Elham, cd into your project and run through php command like below
-```sh
-$ cd your_project_name
+$ cd YOUR_PROJECT_NAME
 $ php -S localhost:8000
 ```
-- Now hit your browser by localhost:8000
 - To check the list of dependencies Elham relies, run the command
 ```sh
 $ composer info
 ```
-
 - As Elham used [Phinx](https://phinx.org/) for migrations, so to use phinx command just run from the terminal
 ```sh
 $ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
