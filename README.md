@@ -1,5 +1,5 @@
 ![Alt text]()
-<img src="https://github.com/chandan07cse/Elham/blob/master/app/Views/images/play_with_code.gif">
+<img src="https://github.com/chandan07cse/Elham/blob/master/app/Views/images/">
 # # Elham - Inspiring You The Next 
 Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
 ### Version
