@@ -1,6 +1,7 @@
 {
     "name": "chandan07cse/elham",
     "description": "Inspiring You The Next",
+    "version": "1.0.0",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
     "license": "MIT",
@@ -8,11 +9,11 @@
         {
             "name": "Md. Ainul Moin Noor",
             "email": "freak.arian@gmail.com",
-            "homepage": "https://github.com/chandan07cse/Elham"
+            "homepage": "https://github.com/chandan07cse/Elham",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.5.9",
         "symfony/class-loader": "3.1.*",
         "symfony/http-foundation": "3.1.*",
         "symfony/routing": "3.1.*",
