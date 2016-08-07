@@ -4,8 +4,12 @@ require "vendor/autoload.php";
 use Symfony\Component\Console\Application;
 use commands\Controller\BuildController;
 use commands\Model\BuildModel;
+use commands\Validator\BuildValidator;
+use commands\Form\BuildForm;
 $app = new Application('Elham Framework','1.0.0');
 $app->add(new BuildController);
-$app->add(new BuildModel());
+$app->add(new BuildModel);
+$app->add(new BuildValidator);
+$app->add(new BuildForm);
 $app->run();
 ?>
