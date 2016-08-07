@@ -4,7 +4,6 @@
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
     "license": "MIT",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Md. Ainul Moin Noor",
@@ -17,12 +16,15 @@
         "symfony/http-foundation": "3.1.*",
         "symfony/routing": "3.1.*",
         "symfony/http-kernel": "3.1.*",
+        "twig/twig": "^1.24",
         "duncan3dc/blade": "^3.1",
         "illuminate/database": "^5.2",
         "robmorgan/phinx": "^0.6.3",
         "respect/validation": "^1.1",
         "vlucas/phpdotenv": "^2.3",
-        "sendgrid/sendgrid": "~2.1.1"
+        "sendgrid/sendgrid": "2.1.1",
+        "sendgrid/smtpapi": "0.0.1",
+        "swiftmailer/swiftmailer": "v5.0.3"
     },
     "require-dev":{
         "fzaninotto/faker": "^1.6",
