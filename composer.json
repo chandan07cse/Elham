@@ -4,6 +4,7 @@
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Md. Ainul Moin Noor",
