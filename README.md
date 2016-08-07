@@ -7,9 +7,13 @@ Let's build together by not reinventing the wheel but assembling the wheels to r
 ```sh
 $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
 ```
-- Then install Elham by the following command
+- Then install Elham by the following command(for latest stable releases)
 ```sh
 $ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
+```
+- But if you want Elham from its master branch, then you could certainly type it
+```sh
+$ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
 ```
 - Now cd into your_project_name & run by the php command
 ```sh
