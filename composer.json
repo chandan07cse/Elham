@@ -1,6 +1,6 @@
 {
     "name": "chandan07cse/elham",
-    "description": "Inspiring You The Next",
+    "description": "Inspiring You The Next - A Product Of UROSD Lab",
     "version": "1.0.0",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
@@ -18,7 +18,7 @@
         "symfony/http-foundation": "3.1.*",
         "symfony/routing": "3.1.*",
         "symfony/http-kernel": "3.1.*",
-        "duncan3dc/blade": "^3.1",
+        "philo/laravel-blade": "3.*",
         "illuminate/database": "^5.2",
         "robmorgan/phinx": "^0.6.3",
         "respect/validation": "^1.1",
