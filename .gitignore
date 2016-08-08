@@ -2,4 +2,4 @@
 /node_modules
 .idea
 composer.lock
-app/Controller/cache
+app/Controller/cache/*
