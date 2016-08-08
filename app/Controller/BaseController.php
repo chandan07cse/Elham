@@ -7,16 +7,12 @@ use Philo\Blade\Blade;
 
 class BaseController
 {
-
     public function plainView(Request $request)
     {
         extract($request->attributes->all(), EXTR_SKIP);
         ob_start();
-        // We follow the naming convention. The name of the route = the name of the file
         include sprintf(__DIR__ . '/../../app/Views/%s.php', $_route);
-        //$val = sprintf(__DIR__ . '/../../app/Views/%s.twig', $_route);
         return new Response(ob_get_clean());
-
     }
 
     public function twigView($template,$params)
