@@ -1,7 +1,6 @@
 {
     "name": "chandan07cse/elham",
     "description": "Inspiring You The Next - A Product Of UROSD Lab",
-    "version": "1.0.0",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
     "license": "MIT",
