@@ -45,6 +45,16 @@ $ elham build:controller YourController plain
 ```sh
 $ elham build:model YourModel
 ```
+- Elham ships with build:form command 
+```sh
+$ elham build:form YourForm
+```
+- A dummy blade form will be generated inside app/Views/_partials directory
+- Elham also provides you build:validator command 
+```sh
+$ elham build:validator YourValidator
+```
+- A validation class will be generated inside 
 - Both commands check the existing ones as well for simplicity.
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install twig by the following command
