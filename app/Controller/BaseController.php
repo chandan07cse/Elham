@@ -3,7 +3,7 @@ namespace Elham\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use duncan3dc\Laravel\BladeInstance;
+use Philo\Blade\Blade;;
 
 class BaseController
 {
@@ -31,9 +31,8 @@ class BaseController
 
     public function bladeView($template,$params=[])
     {
-        $blade = new BladeInstance(__DIR__.'/../Views', __DIR__."/cache");
-
-        echo  $blade->render($template,$params);
+        $blade = new Blade(__DIR__.'/../Views', __DIR__."/cache");
+        echo $blade->view()->make($template,$params)->render();
     }
 
     public function redirect($route,$errorBag,$oldInputValues)
