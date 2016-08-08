@@ -31,7 +31,7 @@ class database{
         elseif(getenv('DB_DRIVER')=='sqlite')
             $this->capsule->addConnection([
                 'driver'=>'sqlite',
-                'database'=> __DIR__.'/../db/database.sqlite',
+                'database'=> __DIR__.'/../db/'.getenv('DB_DATABASE').'.sqlite',
                 'prefix'=>'',
                 ]);
 
@@ -52,7 +52,7 @@ class database{
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         elseif(getenv('DB_DRIVER')=='sqlite'){
-            $path =  __DIR__.'..\db\database.sqlite';
+            $path =  __DIR__.'..\db\\'.getenv('DB_DATABASE').'.sqlite';
             $this->pdo = new \PDO('sqlite:'.$path);
         }
         return $this->pdo;
@@ -62,7 +62,7 @@ class database{
     {
        $this->capsule->addConnection([
             'driver'=>'sqlite',
-            'database'=> __DIR__.'/../db/database.sqlite',
+            'database'=> __DIR__.'/../db/'.getenv('DB_DATABASE').'.sqlite',
             'prefix'=>'',
         ]);
 
