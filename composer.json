@@ -1,6 +1,6 @@
 {
     "name": "chandan07cse/elham",
-    "description": "Custom MVC Framework Of UROSD Lab",
+    "description": "Inspiring You The Next - A Product Of UROSD Lab",
     "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
     "type": "project",
     "license": "MIT",
@@ -38,7 +38,5 @@
         "classmap": [
             "app/Model/"
         ]
-
     }
-
 }

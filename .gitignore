@@ -2,4 +2,10 @@
 /node_modules
 .idea
 composer.lock
+<<<<<<< HEAD
 app/Controller/cache/*
+=======
+app/Controller/cache/*
+app/Views/css/development/*
+app/Views/js/development/*
+>>>>>>> master
