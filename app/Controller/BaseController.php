@@ -3,7 +3,7 @@ namespace Elham\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Philo\Blade\Blade;;
+use Philo\Blade\Blade;
 
 class BaseController
 {
