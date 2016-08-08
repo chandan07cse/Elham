@@ -7,7 +7,6 @@ use Philo\Blade\Blade;
 
 class BaseController
 {
-
     public function plainView(Request $request)
     {
         extract($request->attributes->all(), EXTR_SKIP);
@@ -71,6 +70,4 @@ class BaseController
 
         return $sendgrid->send($email);
     }
-
-
 }
