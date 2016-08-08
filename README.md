@@ -1,5 +1,4 @@
-
-# # Elham - Inspiring You The Next 
+# # Elham - Inspiring You The Next - A Product Of UROSD Lab
 Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
 ### Version
 1.0.0
@@ -46,7 +45,21 @@ $ elham build:controller YourController plain
 ```sh
 $ elham build:model YourModel
 ```
-- Both commands check the existing ones as well for simplicity.
+- Elham ships with build:form command 
+```sh
+$ elham build:form YourForm
+```
+- A dummy blade form will be generated inside app/Views/_partials directory
+- Elham also provides you build:validator command 
+```sh
+$ elham build:validator YourValidator
+```
+- A validation class will be generated inside app/Validation directory
+- Now if you need any help just type 
+```sh 
+$ elham help build:keyword 
+``` 
+- All the commands check the existing ones as well for simplicity.
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install twig by the following command
 ```sh
