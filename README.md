@@ -54,8 +54,12 @@ $ elham build:form YourForm
 ```sh
 $ elham build:validator YourValidator
 ```
-- A validation class will be generated inside 
-- Both commands check the existing ones as well for simplicity.
+- A validation class will be generated inside app/Validation directory
+- Now if you need any help just type 
+```sh 
+$ elham help build:keyword 
+``` 
+- All the commands check the existing ones as well for simplicity.
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install twig by the following command
 ```sh
