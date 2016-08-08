@@ -1,5 +1,4 @@
 @extends('layout.master')
-
 @section('content')
     <style>
         @import url(https://fonts.googleapis.com/css?family=Tangerine);
@@ -26,6 +25,6 @@
     </style>
     <div class="container">
         @include('_partials.svg')
-            <h1>{{$me}}</h1><p>{{$message}}</p>
+        <h1>{{$me}}</h1><p>{{$message}}</p>
     </div>
 @endsection
