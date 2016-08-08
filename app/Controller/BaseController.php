@@ -65,8 +65,6 @@ class BaseController
         {
             $email->addSubstitution('%'.$key.'%',array($value));
         }
-//        addHeader('X-Sent-Using', 'SendGrid-API')->
-//        addHeader('X-Transport', 'web')->
         if($attachment!=null)
          $email->addAttachment($attachment, 'attachment'.$extension);
 
