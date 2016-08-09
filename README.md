@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Elham - Inspiring You The Next - A Product Of UROSD Lab
-=======
-# # Elham - Inspiring You The Next - A Product Of UROSD Lab
->>>>>>> master
 Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
 ### Version
 1.0.0
@@ -53,38 +49,26 @@ $ elham build:controller YourController plain
 ```sh
 $ elham build:model YourModel
 ```
-<<<<<<< HEAD
 #Build Form Through CLI
-=======
->>>>>>> master
 - Elham ships with build:form command 
 ```sh
 $ elham build:form YourForm
 ```
 - A dummy blade form will be generated inside app/Views/_partials directory
-<<<<<<< HEAD
 #Build Validator Through CLI
-=======
->>>>>>> master
 - Elham also provides you build:validator command 
 ```sh
 $ elham build:validator YourValidator
 ```
-<<<<<<< HEAD
 - A validation class will be generated inside app/Validation directory.
 #Help keyword for CLI generators
-=======
 - A validation class will be generated inside app/Validation directory
->>>>>>> master
 - Now if you need any help just type 
 ```sh 
 $ elham help build:keyword 
 ``` 
 - All the commands check the existing ones as well for simplicity.
-<<<<<<< HEAD
 #Elham Blade Templating
-=======
->>>>>>> master
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install [TWIG](http://twig.sensiolabs.org/) by the following command
 ```sh
