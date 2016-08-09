@@ -24,7 +24,7 @@ class BuildModel extends Command{
         if($file->exists('app/Model/'.$ModelName.'.php'))
             $output->writeln("<fg=red;options=bold>{$ModelName} Model Already Exists</>");
         else {
-            $modelTemplate = file_get_contents('commands/Model/template.blade.php');
+            $modelTemplate = file_get_contents('commands/Model/template.php');
             $modelTemplate = str_replace("YourModel",$ModelName,$modelTemplate);
             $file->dumpFile('app/Model/' . $ModelName . '.php', $modelTemplate);
             $output->writeln('<comment>' . $ModelName . ' Model</comment><info> Built Successfully</info>');
