@@ -55,7 +55,6 @@ $ elham build:model YourModel
 $ elham build:form YourForm
 ```
 - A dummy blade form will be generated inside app/Views/_partials directory
-
 #Build Validator Through CLI
 - Elham also provides you build:validator command 
 ```sh
