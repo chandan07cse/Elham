@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class User extends Eloquent{
     //use PDO;
-    protected $fillable=['username','email','password','image'];//remember the format
+    protected $fillable=['username','email','password'];//remember the format
     protected $userName,$email,$passWord,$imageName;
     public $timestamps = false;
     public function setUserName($userName)
