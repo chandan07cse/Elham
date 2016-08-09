@@ -55,12 +55,14 @@ $ elham build:model YourModel
 $ elham build:form YourForm
 ```
 - A dummy blade form will be generated inside app/Views/_partials directory
+
 #Build Validator Through CLI
 - Elham also provides you build:validator command 
 ```sh
 $ elham build:validator YourValidator
 ```
 - A validation class will be generated inside app/Validation directory.
+
 #Help keyword for CLI generators
 - A validation class will be generated inside app/Validation directory
 - Now if you need any help just type 
@@ -68,12 +70,14 @@ $ elham build:validator YourValidator
 $ elham help build:keyword 
 ``` 
 - All the commands check the existing ones as well for simplicity.
+
 #Elham Templating Engines 
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install [TWIG](http://twig.sensiolabs.org/) by the following command
 ```sh
 $ composer require twig/twig
 ```
+
 #Elham Migrations
 - As Elham used [Phinx](https://phinx.org/) for migrations, so to use phinx command just run from the terminal
 ```sh
@@ -145,6 +149,7 @@ $ phinx migrate
 $ phinx rollback
 ```
 - To explore more about Phinx, please read the [documentation](http://docs.phinx.org/en/latest/). 
+
 # Elham Playground
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
@@ -173,6 +178,7 @@ $ $user = new Elham\Model\User;
 $ $user->all()->toArray();
 ```
 - You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
+
 # Elham Frontend Housekeeping
 - Elham used [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command
 ```sh
@@ -193,6 +199,7 @@ We can do that by running into terminal
 ```sh
 $ sudo npm install gulp-clean-css --save-dev
 ```
+
 #Elham Zero Second Deployment
 - Elham proudly compatibles with [ngrok](https://ngrok.com/). So you can deploy it less than a second.
 For that you'll have to install node & nodejs-legacy by the following command
