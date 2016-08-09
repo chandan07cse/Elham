@@ -70,6 +70,4 @@ class BaseController
 
         return $sendgrid->send($email);
     }
-
-
 }

@@ -1,5 +1,9 @@
 <?php
 
+<<<<<<< HEAD
+use Carbon\Carbon;
+=======
+>>>>>>> master
 use Phinx\Seed\AbstractSeed;
 
 class UserSeeder extends AbstractSeed
@@ -14,6 +18,22 @@ class UserSeeder extends AbstractSeed
      */
     public function run()
     {
+<<<<<<< HEAD
+//        $data = array(
+//            array(
+//                'email'    => 'freak.arian@gmail.com',
+//                'password' => md5('me'),
+//                'created_at' => Carbon::now()
+//            ),
+//            array(
+//                'email'    => 'chandan07cse@gmail.com',
+//                'password' => md5('chandan07cse@!'),
+//                'active' => 1,
+//                'created_at' => Carbon::now(),
+//            )
+//        );
+
+=======
         /*
          * Manual Seeding
          * */
@@ -32,13 +52,20 @@ class UserSeeder extends AbstractSeed
         /*
          * As Elham ships with faker, so we can make use of that just like below
          * */
+>>>>>>> master
         $faker = Faker\Factory::create();
         $data = [];
         for ($i = 0; $i < 100; $i++) {
             $data[] = [
+<<<<<<< HEAD
+                'email'      => $faker->email,
+                'password'      => sha1($faker->password),
+                'created_at'       => date('Y-m-d H:i:s'),
+=======
                 'username'      => $faker->userName,
                 'password'      => sha1($faker->password),
                 'email'       => $faker->email,
+>>>>>>> master
             ];
         }
 
@@ -50,4 +77,7 @@ class UserSeeder extends AbstractSeed
 //              ->save();
     //}
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> master

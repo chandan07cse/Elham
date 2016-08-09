@@ -1,5 +1,11 @@
 {
   "devDependencies": {
+<<<<<<< HEAD
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-jsmin": "^0.1.5"
+=======
     "gulp": "^3.9.1"
+>>>>>>> master
   }
 }

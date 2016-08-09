@@ -22,7 +22,8 @@
         "robmorgan/phinx": "^0.6.3",
         "respect/validation": "^1.1",
         "vlucas/phpdotenv": "^2.3",
-        "sendgrid/sendgrid": "~2.1.1"
+        "sendgrid/sendgrid": "~2.1.1",
+        "twig/twig": "^1.24"
     },
     "require-dev":{
         "fzaninotto/faker": "^1.6",

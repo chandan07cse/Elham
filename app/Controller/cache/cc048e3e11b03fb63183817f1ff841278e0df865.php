@@ -1,7 +1,6 @@
-@extends('layout.master')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <style>
-        @import url(https://fonts.googleapis.com/css?family=Tangerine);
+        @import  url(https://fonts.googleapis.com/css?family=Tangerine);
         h1{
             font-family: 'Tangerine', cursive;
             font-size:50px;
@@ -24,7 +23,8 @@
         }
     </style>
     <div class="container">
-        @include('_partials.svg')
-        <h1>{{$me}}</h1><p>{{$message}}</p>
+        <?php echo $__env->make('_partials.svg', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <h1><?php echo e($me); ?></h1><p><?php echo e($message); ?></p>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
