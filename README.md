@@ -68,7 +68,7 @@ $ elham build:validator YourValidator
 $ elham help build:keyword 
 ``` 
 - All the commands check the existing ones as well for simplicity.
-#Elham Blade Templating
+#Elham Templating Engines 
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install [TWIG](http://twig.sensiolabs.org/) by the following command
 ```sh
