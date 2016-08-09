@@ -17,30 +17,30 @@ class UserSeeder extends AbstractSeed
         /*
          * Manual Seeding
          * */
-        $data = array(
-            array(
-                'username'    => 'chandan07cse',
-                'password' => md5('me'),
-                'email' => 'freak.arian@gmail.com'
-            ),
-            array(
-                'username'    => 'freakarian07',
-                'password' => md5('chandan07cse@!'),
-                'email' => 'chandan07cse@gmail.com',
-            )
-        );
+//        $data = array(
+//            array(
+//                'username'    => 'chandan07cse',
+//                'password' => md5('me'),
+//                'email' => 'freak.arian@gmail.com'
+//            ),
+//            array(
+//                'username'    => 'freakarian07',
+//                'password' => md5('chandan07cse@!'),
+//                'email' => 'chandan07cse@gmail.com',
+//            )
+//        );
         /*
          * As Elham ships with faker, so we can make use of that just like below
          * */
-//        $faker = Faker\Factory::create();
-//        $data = [];
-//        for ($i = 0; $i < 100; $i++) {
-//            $data[] = [
-//                'email'      => $faker->email,
-//                'password'      => sha1($faker->password),
-//                'created_at'       => date('Y-m-d H:i:s'),
-//            ];
-//        }
+        $faker = Faker\Factory::create();
+        $data = [];
+        for ($i = 0; $i < 100; $i++) {
+            $data[] = [
+                'username'      => $faker->userName,
+                'password'      => sha1($faker->password),
+                'email'       => $faker->email,
+            ];
+        }
 
         $this->insert('users', $data);
     }
