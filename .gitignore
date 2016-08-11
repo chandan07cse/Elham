@@ -2,7 +2,7 @@
 /node_modules
 .idea
 composer.lock
-app/Controller/cache/*
+//app/Controller/cache/*
 app/Views/css/development
 app/Views/js/development
 phinx.yml
