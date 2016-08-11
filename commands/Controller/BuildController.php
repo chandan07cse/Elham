@@ -26,7 +26,7 @@ class BuildController extends Command{
         if($file->exists('app/Controller/'.$ControllerName.'.php'))
             $output->writeln("<fg=red;options=bold>{$ControllerName} Already Exists</>");
         else {
-            $controllerTemplate = file_get_contents('commands/Controller/'.$flag.'/template.blade.php');
+            $controllerTemplate = file_get_contents('commands/Controller/'.$flag.'/template.php');
             $controllerTemplate = str_replace("YourController",$ControllerName,$controllerTemplate);
             $file->dumpFile('app/Controller/' . $ControllerName . '.php', $controllerTemplate);
             $flag = $flag=='resource' ? 'Resourceful' : 'Plain';
