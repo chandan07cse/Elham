@@ -27,4 +27,5 @@
         @include('_partials.svg')
         <h1>{{$me}}</h1><p>{{$message}}</p>
     </div>
+    <a href="/user/create">Create</a>
 @endsection

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class User extends Eloquent{
     //use PDO;
-    protected $fillable=['username','email','password'];//remember the format
+    protected $fillable=['username','email','password','image'];//remember the format
     protected $userName,$email,$passWord,$imageName;
     public $timestamps = false;
     public function setUserName($userName)
@@ -50,10 +50,10 @@ class User extends Eloquent{
     }
     public function insert()
     {
-        $command = Form::create([
+        $command = User::create([
             'username'=>$this->getUserName(),
-            'email'=>$this->getEmail(),
             'password'=>$this->getPassWord(),
+            'email'=>$this->getEmail(),
             'image'=>$this->getImageName()
         ]);
 //        using Query Builder
@@ -70,5 +70,28 @@ class User extends Eloquent{
     public function getAll()
     {
         return User::all()->toArray();
+    }
+
+    public function getSpecificUser($userId)
+    {
+        return User::find($userId)->toArray();
+    }
+
+    public function edit($userId)
+    {
+        $update = User::where('id',$userId)
+                      ->update([
+                          'username' => $this->getUserName(),
+                          'password' => $this->getPassWord(),
+                          'email' => $this->getEmail(),
+                          'image' => $this->getImageName()]
+                      );
+        return $update ? true : false;
+    }
+
+    public function remove($userId)
+    {
+        return User::find($userId)->delete();
+
     }
 }

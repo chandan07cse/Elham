@@ -52,7 +52,7 @@ class BaseController
         $template = file_get_contents(__DIR__.'/../Views/'.$template);
         if($attachment!=null) {
             $extension = strstr(strtolower($attachment), ".");
-            $attachment = __DIR__ . '/../Views/' . $attachment;
+            $attachment = __DIR__ . '/../' . $attachment;
         }
         $sendgrid = new \SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
         $email    = new \SendGrid\Email();

@@ -10,6 +10,7 @@ class Users extends AbstractMigration
         $users->addColumn('username','string',['length'=>100])
             ->addColumn('password','string',['length'=>20])
             ->addColumn('email','string')
+            ->addColumn('image','string')
             ->create();
     }
     public function down()
