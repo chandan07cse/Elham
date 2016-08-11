@@ -50,7 +50,8 @@
     <div class="form-group col-sm-12 <?php echo e(@$errors->image ? 'has-error' : ''); ?>">
         <label for="image">Update Image</label>
         <img src="images/<?php echo e($userData['image']); ?>" width="100" height="100" alt="">
-        <input class="form-control" name="image" <?php echo e(@$errors->image ? 'autofocus':''); ?> type="file" value="<?php echo e(@$userData['image']); ?>" />
+        <input class="form-control" name="image"  <?php echo e(@$errors->image ? 'autofocus':''); ?> type="file"   />
+        <input type="hidden" name="oldImageName" value="<?php echo e(@$userData['image']); ?>">
         <?php if(@$errors->image): ?>
             <ul>
                 <?php foreach($errors->image as $error): ?>
@@ -63,4 +64,5 @@
         <button class="btn btn-primary">Update</button>
     </div>
 </form>
+<?php echo e(@$userData['image']); ?>
 

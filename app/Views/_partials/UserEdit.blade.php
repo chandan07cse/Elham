@@ -50,7 +50,8 @@
     <div class="form-group col-sm-12 {{@$errors->image ? 'has-error' : ''}}">
         <label for="image">Update Image</label>
         <img src="images/{{$userData['image']}}" width="100" height="100" alt="">
-        <input class="form-control" name="image" {{@$errors->image ? 'autofocus':''}} type="file" value="{{@$userData['image']}}" />
+        <input class="form-control" name="image"  {{@$errors->image ? 'autofocus':''}} type="file"   />
+        <input type="hidden" name="oldImageName" value="{{@$userData['image']}}">
         @if(@$errors->image)
             <ul>
                 @foreach($errors->image as $error)
@@ -63,4 +64,4 @@
         <button class="btn btn-primary">Update</button>
     </div>
 </form>
-
+{{@$userData['image']}}

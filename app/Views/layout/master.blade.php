@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
         <title>Welcome To Elham</title>
     <base href="http://{{$_SERVER['HTTP_HOST']}}">
     <link rel="stylesheet" href="css/{{getenv('APP_ENV')}}/bootstrap.css" />
-    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
-    <link rel="icon" href="images/favicon.ico" />
+     <link rel="icon" href="images/favicon.ico" />
 </head>
 <body>
 <div class="container">

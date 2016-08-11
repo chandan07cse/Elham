@@ -26,6 +26,5 @@
         <?php echo $__env->make('_partials.svg', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <h1><?php echo e($me); ?></h1><p><?php echo e($message); ?></p>
     </div>
-    <a href="/user/create">Create</a>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -93,12 +93,11 @@ class HomeController extends BaseController{
     public function update(Request $request)
     {
         $userId = $request->get('id');
-        echo $userId;
         $inputs = $request->request->all(); //fetching all form fields
         $image = $request->files->get('image');
         $this->validator->validate($inputs);//validating the inputs
         if($image)
-           $this->validator->imageCheck($image);//validating the image
+            $this->validator->imageCheck($image);//validating the image
         if($this->validator->errors())
         {
             $errorBag = $this->validator->errors();//putting errors in error bag
@@ -106,12 +105,13 @@ class HomeController extends BaseController{
         }
         else
         {
-            $imageName = $request->get('username').'.' . $image->getClientOriginalExtension();//renaming image
+            $imageName = $image ? $request->get('username').'.' . $image->getClientOriginalExtension() : $request->get('oldImageName');//renaming image
             $this->user->setUserName($request->get('username'));
             $this->user->setEmail($request->get('email'));
             $this->user->setPassWord($request->get('password'));
             $this->user->setImageName($imageName);
-            $image->move('images', $imageName);
+            if($image)
+                $image->move('images', $imageName);
             if($this->user->edit($userId)){
                 $this->redirect('/user/'.$userId.'?message=User Updated Successfully');
             }
