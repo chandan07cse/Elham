@@ -55,14 +55,25 @@ class HomeController extends BaseController{
             $password = $request->get('password');
             $imageName = $username.'.' . $image->getClientOriginalExtension();//renaming image
             $image->move('images', $imageName);
+            /*
+             * Mail Through Sendgrid
+             * Here template,templateData & attachment is optional
+             * */
+            $from = 'sysadmin@elham.rocks';
+            $to = $email;
+            $subject = 'Testing Elham Email Through Sendgrid';
+            $body = "Dear {$username}, Greetings from Elham";
+            $template = "email/test.html";
+            $templateData = ['name'=>$username,'email'=>$to,'address'=>'33, Shahid Sorhawardi College Road'];
+            $attachment = '../public/images/'.$imageName;
             $mail = $this->SendMailUsingSendgrid(
-                'chandan07cse@gmail.com',
-                'freak.arian@gmail.com',
-                'Test',
-                'Testing Yarr',
-                'email/test.html',
-                array('name'=>'Noor','email'=>'sysadmin@urosd.com','address'=>'33, Shahid Sorhawardi College Road'),
-                '../public/images/'.$imageName
+                    $from,
+                    $to,
+                    $subject,
+                    $body,
+                    $template,
+                    $templateData,
+                    $attachment
             );
             $this->user->setUserName($username);
             $this->user->setEmail($email);
@@ -85,7 +96,6 @@ class HomeController extends BaseController{
     public function edit(Request $request)
     {
         $userId = $request->get('id');
-        //echo $userId; exit;
         $userData = $this->user->getSpecificUser($userId);
         $this->bladeView('UserEdit',compact('userData'));
     }
