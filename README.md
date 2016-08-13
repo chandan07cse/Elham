@@ -11,10 +11,6 @@ $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr
 ```sh
 $ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```
-- But if you want Elham from its master branch, then you could certainly type it
-```sh
-$ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
-```
 - Now cd into your_project_name/public & run by the php command
 ```sh
 $ cd YOUR_PROJECT_NAME/public
