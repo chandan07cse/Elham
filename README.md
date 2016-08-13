@@ -15,10 +15,14 @@ $ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```sh
 $ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
 ```
-- Now cd into your_project_name & run by the php command
+- Now cd into your_project_name/public & run by the php command
 ```sh
-$ cd YOUR_PROJECT_NAME
+$ cd YOUR_PROJECT_NAME/public
 $ php -S localhost:8000
+```
+- After running the server, just cd 1 directory back for the rest of the commands
+```
+$ cd ../
 ```
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
