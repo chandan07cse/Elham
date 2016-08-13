@@ -57,6 +57,7 @@ class HomeController extends BaseController{
             $image->move('images', $imageName);
             /*
              * Mail Through Sendgrid
+             * from,to & body is mandatory here
              * Here template,templateData & attachment is optional
              * */
             $from = 'sysadmin@elham.rocks';
