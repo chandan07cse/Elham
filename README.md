@@ -99,8 +99,8 @@ $ development:
           adapter: sqlite
           host: localhost
           name: db/database.sqlite
-          user: root
-          pass: ''
+          user: 
+          pass: 
           port: 3306
           charset: utf8
 ```
