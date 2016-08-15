@@ -15,9 +15,9 @@ $ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```sh
 $ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
 ```
-- Now cd into your_project_name & run by the php command
+- Now cd into your_project_name/public & run by the php command
 ```sh
-$ cd YOUR_PROJECT_NAME
+$ cd YOUR_PROJECT_NAME/public
 $ php -S localhost:8000
 ```
 # Dependencies
@@ -167,7 +167,14 @@ $ $environment->load();
 - To init the database with eloquent, run in terminal
 ```sh
 $ $db = new config\database;
-$ $db->defaultDB();
+```
+- Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule
+```sh
+$ $db->connectThroughCapsule(); 
+```
+- And if you wanna query through PDO, create an instance of the PDO
+```sh
+$ $db->connectThroughPDO(); 
 ```
 - Now if you wanna play with User model, create an object of User by running in terminal
 ```sh

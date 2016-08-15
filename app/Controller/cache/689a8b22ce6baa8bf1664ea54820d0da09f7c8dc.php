@@ -1,5 +1,6 @@
 <?php /* */$oldValue = !empty($_REQUEST['oldInputs']) ? json_decode($_REQUEST['oldInputs']) : json_encode(['val'=>'noor']);/* */ ?>
 <?php /* */$errors = !empty($_REQUEST['errorBag']) ? json_decode($_REQUEST['errorBag']) : json_encode([''=>'']);/**/ ?>
+
 <form action="/user/store" method="POST"  role="form" enctype="multipart/form-data">
     <legend>Profile</legend>
     <div class="form-group col-sm-12 <?php echo e(@$errors->username ? 'has-error' : ''); ?>">

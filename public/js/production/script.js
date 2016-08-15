@@ -1,2 +1,2 @@
 
-new Vue({el:'.container',data:{message:'Hello World',txt_message:''}});
+$(document).ready(function(){alert('Hi');});
