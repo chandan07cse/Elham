@@ -11,14 +11,14 @@ $ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr
 ```sh
 $ composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```
+- But if you want Elham from its master branch, then you could certainly type it
+```sh
+$ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
+```
 - Now cd into your_project_name/public & run by the php command
 ```sh
 $ cd YOUR_PROJECT_NAME/public
 $ php -S localhost:8000
-```
-- After running the server, just cd 1 directory back for the rest of the commands
-```
-$ cd ../
 ```
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
@@ -167,7 +167,14 @@ $ $environment->load();
 - To init the database with eloquent, run in terminal
 ```sh
 $ $db = new config\database;
-$ $db->defaultDB();
+```
+- Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule
+```sh
+$ $db->connectThroughCapsule(); 
+```
+- And if you wanna query through PDO, create an instance of the PDO
+```sh
+$ $db->connectThroughPDO(); 
 ```
 - Now if you wanna play with User model, create an object of User by running in terminal
 ```sh
