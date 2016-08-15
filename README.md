@@ -129,9 +129,9 @@ $  {
 $       public function up()
 $       {
 $            $students = $this->table('students');
-$                    $students->addColumn('name','string',['length'=>100])
-$                             ->addColumn('roll','string')
-$                             ->create();
+$            $students->addColumn('name','string',['length'=>100])
+$                     ->addColumn('roll','string')
+$                     ->create();
 $       }
 $       public function down()
 $       {
