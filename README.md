@@ -20,6 +20,10 @@ $ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
 $ cd YOUR_PROJECT_NAME/public
 $ php -S localhost:8000
 ```
+- Note : For the rest of the project we'll run each & every command from the project directory. For that
+```sh
+$ cd ../
+```
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
 ```sh
