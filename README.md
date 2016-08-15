@@ -230,4 +230,4 @@ $ ngrok http 8000
  that port to ngrok
 
 # Elham Production Deployment
-- Don't worry it also supports any repo(Github,Gitlab,Bitbucket....) and any CI (Jenkins) and any server(Linux Ditro. preferred) in deployment.
+- Don't worry it also supports any repo(Github,Gitlab,Bitbucket....) and any CI (Jenkins) and any server(Linux Distro. preferred) in deployment.
