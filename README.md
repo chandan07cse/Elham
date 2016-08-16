@@ -24,7 +24,7 @@ $ php -S localhost:8000
 ```sh
 $ cd ../
 ```
-- Now copy the .env.sample to .env for security reason. As .env should be included in gitingnore
+- Now copy the .env.sample to .env for security reason. As .env should be included in gitignore file
 ```sh
 $ sudo cp .env.sample .env
 ```
