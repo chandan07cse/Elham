@@ -23,6 +23,7 @@ $ php -S localhost:8000
 - Note : For the rest of the project we'll run each & every command from the project directory. For that
 ```sh
 $ cd ../
+$ sudo cp .env.sample .env
 ```
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
