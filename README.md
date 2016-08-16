@@ -23,6 +23,9 @@ $ php -S localhost:8000
 - Note : For the rest of the project we'll run each & every command from the project directory. For that
 ```sh
 $ cd ../
+```
+- Now copy the .env.sample to .env for security reason. As .env should be included in gitingnore
+```sh
 $ sudo cp .env.sample .env
 ```
 # Dependencies
