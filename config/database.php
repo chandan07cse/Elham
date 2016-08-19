@@ -55,6 +55,7 @@ class database
         } elseif (getenv('DB_DRIVER') == 'sqlite') {
             $path = __DIR__ . '..\db\\' . getenv('DB_DATABASE') . '.sqlite';
             $this->pdo = new \PDO('sqlite:' . $path);
+            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         return $this->pdo;
     }
