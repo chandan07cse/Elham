@@ -9,7 +9,7 @@ class database
 {
     protected $capsule, $pdo;
 
-    //init capsule instance cause it's highly recommended to use eloquent for simplicity
+    //init capsule instance
     public function __construct()
     {
         $this->capsule = new Capsule();
@@ -53,13 +53,9 @@ class database
             $this->pdo = new \PDO("{$driver}:host={$host};dbname={$database}", "{$username}", "{$password}");//local
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } elseif (getenv('DB_DRIVER') == 'sqlite') {
-            $path = __DIR__ . '..\db\\' . getenv('DB_DATABASE') . '.sqlite';
-            $this->pdo = new \PDO('sqlite:' . $path);
+            $this->pdo = new \PDO('sqlite:' . __DIR__ . '/../db/' . getenv('DB_DATABASE') . '.sqlite');
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         return $this->pdo;
     }
 }
-
-
-

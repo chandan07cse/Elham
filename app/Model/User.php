@@ -5,7 +5,7 @@ use config\PDO;//For PDO Queries
 use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class User extends Eloquent{
-//    use PDO;
+    use PDO;
     protected $fillable=['username','email','password','image'];//remember the format
     protected $userName,$email,$passWord,$imageName;
     public $timestamps = false;
@@ -50,12 +50,12 @@ class User extends Eloquent{
     }
     public function insert()
     {
-        $command = User::create([
-            'username'=>$this->getUserName(),
-            'password'=>$this->getPassWord(),
-            'email'=>$this->getEmail(),
-            'image'=>$this->getImageName()
-        ]);
+//        $command = User::create([
+//            'username'=>$this->getUserName(),
+//            'password'=>$this->getPassWord(),
+//            'email'=>$this->getEmail(),
+//            'image'=>$this->getImageName()
+//        ]);
 //        using Query Builder
 //       $command = Capsule::table('forms')->insert([
 //           'id'=>null,
@@ -64,6 +64,14 @@ class User extends Eloquent{
 //           'password'=>'chandan07cse@!',
 //           'image'=>'images/me.jpg'
 //       ]);
+        $command = $this->pdo()->prepare("insert into users values (:id,:username,:password,:email,:image)");
+        $command = $command->execute(array(
+            ':id'=>null,
+            ':username'=>$this->getUserName(),
+            ':password'=>$this->getPassWord(),
+            ':email'=>$this->getEmail(),
+            ':image'=>$this->getImageName()
+        ));
         return $command ? true : false;
     }
 

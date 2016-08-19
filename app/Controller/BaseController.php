@@ -31,7 +31,7 @@ class BaseController
         echo $blade->view()->make($template,$params)->render();
     }
 
-    public function redirect($route,$errorBag,$oldInputValues)
+    public function redirect($route,$errorBag=null,$oldInputValues=null)
     {
         if($errorBag==null && $oldInputValues==null)
             header('location:'.$route);
