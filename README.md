@@ -29,6 +29,7 @@ $ cd ../
 $ sudo cp .env.sample .env
 ```
 - Now put necessary information into the .env file
+
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
 ```sh
