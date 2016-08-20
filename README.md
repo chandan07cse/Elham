@@ -68,7 +68,6 @@ $ elham build:validator YourValidator
 - A validation class will be generated inside app/Validation directory.
 
 # Help keyword for CLI generators
-- A validation class will be generated inside app/Validation directory
 - Now if you need any help just type 
 ```sh 
 $ elham help build:keyword 
