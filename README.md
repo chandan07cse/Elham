@@ -24,12 +24,6 @@ $ php -S localhost:8000
 ```sh
 $ cd ../
 ```
-- Now copy the .env.sample to .env for security reason. As .env should be included in gitignore file
-```sh
-$ sudo cp .env.sample .env
-```
-- Now put necessary information into the .env file
-
 # Dependencies
 - To check the list of dependencies Elham relies, run the command
 ```sh
