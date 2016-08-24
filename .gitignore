@@ -6,5 +6,5 @@ app/Controller/cache/*
 public/css/development
 public/js/development
 phinx.yml
-
+.env
 

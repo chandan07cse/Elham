@@ -44,30 +44,32 @@ class BaseController
 
     }
 
-    public function SendMailUsingSendgrid($from,$to,$subject,$message,$template=null,$data=[],$attachment=null)
+    public function SendMail($from,$to,$subject,$body,$template=null,$datumn=[],$attachment=null)
     {
-        $sendgrid_username = getenv('MAIL_USERNAME');
-        $sendgrid_password = getenv('MAIL_PASSWORD');
 
-        $template = file_get_contents(__DIR__.'/../Views/'.$template);
-        if($attachment!=null) {
-            $extension = strstr(strtolower($attachment), ".");
-            $attachment = __DIR__ . '/../' . $attachment;
-        }
-        $sendgrid = new \SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
-        $email    = new \SendGrid\Email();
-        $email->addTo($to)->
-        setFrom($from)->
-        setSubject($subject)->
-        setText($message)->
-        setHtml($template);
-        foreach($data as $key=>$value)
+        $transport = \Swift_SmtpTransport::newInstance(getenv('MAIL_HOST'),getenv('MAIL_PORT'), getenv('MAIL_ENCRYPTION'))
+            ->setUsername(getenv('MAIL_USERNAME'))
+            ->setPassword(getenv('MAIL_PASSWORD'));
+        $mailer = \Swift_Mailer::newInstance($transport);
+
+        $body = $template ? file_get_contents(__DIR__.'/../Views/'.$template) : $body;
+        $type = $template ? 'text/html' : '';
+
+        $data = array();
+        foreach($datumn as $key=>$value)
         {
-            $email->addSubstitution('%'.$key.'%',array($value));
-        }
-        if($attachment!=null)
-         $email->addAttachment($attachment, 'attachment'.$extension);
+            $data["%".$key."%"] = $value;
 
-        return $sendgrid->send($email);
+        }
+        $replacements[$to] = $data;
+        $plugin = new \Swift_Plugins_DecoratorPlugin($replacements);
+        $mailer->registerPlugin($plugin);
+        $message = \Swift_Message::newInstance($subject)
+            ->setFrom(array($from => 'Freak Arian'))
+            ->setTo($to)
+            ->setBody($body,$type);
+        $message->attach(\Swift_Attachment::fromPath($attachment,'Attachment'));
+
+       return $mailer->send($message);
     }
 }

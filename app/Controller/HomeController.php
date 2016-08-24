@@ -60,27 +60,27 @@ class HomeController extends BaseController{
              * from,to & body is mandatory here
              * Here template,templateData & attachment is optional
              * */
-//            $from = 'sysadmin@elham.rocks';
-//            $to = $email;
-//            $subject = 'Testing Elham Email Through Sendgrid';
-//            $body = "Dear {$username}, Greetings from Elham";
-//            $template = "email/test.html";
-//            $templateData = ['name'=>$username,'email'=>$to,'address'=>'33, Shahid Sorhawardi College Road'];
-//            $attachment = '../public/images/'.$imageName;
-//            $mail = $this->SendMailUsingSendgrid(
-//                    $from,
-//                    $to,
-//                    $subject,
-//                    $body,
-//                    $template,
-//                    $templateData,
-//                    $attachment
-//            );
+            $from = 'sysadmin@elham.rocks';
+            $to = $email;
+            $subject = 'Testing Elham Email Through Sendgrid';
+            $body = "Dear {$username}, Greetings from Elham";
+            $template = "email/test.html";
+            $templateData = ['name'=>$username,'email'=>$to,'address'=>'33, Shahid Sorhawardi College Road'];
+            $attachment = '../public/images/'.$imageName;
+            $mail = $this->SendMail(
+                    $from,
+                    $to,
+                    $subject,
+                    $body,
+                    $template,
+                    $templateData,
+                    $attachment
+            );
             $this->user->setUserName($username);
             $this->user->setEmail($email);
             $this->user->setPassWord($password);
             $this->user->setImageName($imageName);
-            if($this->user->insert()){
+            if($this->user->insert() && $mail){
                 $this->redirect('/user/create?message=User Created Successfully, Please check your email');
             }
 
