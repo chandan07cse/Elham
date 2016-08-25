@@ -11,4 +11,13 @@ $routes->add('UserShow', new Route('/user/show', array('_controller' => 'Elham\\
 $routes->add('UserEdit', new Route('/user/{id}', array('_controller' => 'Elham\\Controller\\HomeController::edit')));
 $routes->add('UserUpdate', new Route('/user/{id}/update', array('_controller' => 'Elham\\Controller\\HomeController::update')));
 $routes->add('UserDelete', new Route('/user/{id}/delete', array('_controller' => 'Elham\\Controller\\HomeController::delete')));
+
+
+
+
+
+
+
+
+
 return $routes;

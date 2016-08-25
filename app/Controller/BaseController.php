@@ -54,13 +54,9 @@ class BaseController
 
         $body = $template ? file_get_contents(__DIR__.'/../Views/'.$template) : $body;
         $type = $template ? 'text/html' : '';
-
-        $data = array();
+        $data = [];
         foreach($datumn as $key=>$value)
-        {
             $data["%".$key."%"] = $value;
-
-        }
         $replacements[$to] = $data;
         $plugin = new \Swift_Plugins_DecoratorPlugin($replacements);
         $mailer->registerPlugin($plugin);

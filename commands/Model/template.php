@@ -20,6 +20,6 @@ class YourModel extends Eloquent{
      * @var array
      */
     protected $hidden=['password'];
-    public $timestamps = false;
+    public $timestamps = false;//uncomment this line if you wanna use created_at & updated_at fields
 
 }
