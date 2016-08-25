@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Elham by chandan07cse</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Elham</h1>
+        <p class="header">Inspiring You The Next</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/chandan07cse/Elham/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/chandan07cse/Elham/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/chandan07cse/Elham">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/chandan07cse">chandan07cse</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="elham---inspiring-you-the-next---a-product-of-urosd-lab" class="anchor" href="#elham---inspiring-you-the-next---a-product-of-urosd-lab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham - Inspiring You The Next - A Product Of UROSD Lab</h1>
+
+<p>Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.</p>
+
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h3>
+
+<p>1.0.0</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<ul>
+<li>First install composer globally(if you don't have it) by running the following commands</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ curl -sS https://getcomposer.org/installer <span class="pl-k">|</span> php <span class="pl-k">&amp;&amp;</span> sudo mv composer.phar /usr/local/bin/composer</pre></div>
+
+<ul>
+<li>Then install Elham by the following command(for latest stable releases)</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ composer create-project chandan07cse/elham YOUR_PROJECT_NAME</pre></div>
+
+<ul>
+<li>But if you want Elham from its master branch, then you could certainly type it</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME</pre></div>
+
+<ul>
+<li>Now cd into your_project_name/public &amp; run by the php command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">cd</span> YOUR_PROJECT_NAME/public
+$ php -S localhost:8000</pre></div>
+
+<ul>
+<li>Note : For the rest of the project we'll run each &amp; every command from the project directory. For that</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">cd</span> ../</pre></div>
+
+<h1>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h1>
+
+<ul>
+<li>To check the list of dependencies Elham relies, run the command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ composer info</pre></div>
+
+<h1>
+<a id="elham-command-alias" class="anchor" href="#elham-command-alias" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Command Alias</h1>
+
+<ul>
+<li>Let's run the below command to run elham command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias elham='./elham'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bash_aliases <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">source</span> <span class="pl-k">~</span>/.bash_aliases</pre></div>
+
+<ul>
+<li>Now you can run elham command through out your project. To check run from the terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham</pre></div>
+
+<h1>
+<a id="build-controller-through-cli" class="anchor" href="#build-controller-through-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build Controller Through CLI</h1>
+
+<ul>
+<li>Elham provides you the build:controller command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham build:controller YourController</pre></div>
+
+<ul>
+<li>Check it by finding it in app/Controller directory of your project.</li>
+<li>By default elham generates resourceful controller. But if you want you can always make a plain controller by running</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham build:controller YourController plain</pre></div>
+
+<h1>
+<a id="build-model-through-cli" class="anchor" href="#build-model-through-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build Model Through CLI</h1>
+
+<ul>
+<li>Elham also provides you build:model command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham build:model YourModel</pre></div>
+
+<h1>
+<a id="build-form-through-cli" class="anchor" href="#build-form-through-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build Form Through CLI</h1>
+
+<ul>
+<li>Elham ships with build:form command </li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham build:form YourForm</pre></div>
+
+<ul>
+<li>A dummy blade form will be generated inside app/Views/_partials directory.</li>
+</ul>
+
+<h1>
+<a id="build-validator-through-cli" class="anchor" href="#build-validator-through-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build Validator Through CLI</h1>
+
+<ul>
+<li>Elham also provides you build:validator command </li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham build:validator YourValidator</pre></div>
+
+<ul>
+<li>A validation class will be generated inside app/Validation directory.</li>
+</ul>
+
+<h1>
+<a id="help-keyword-for-cli-generators" class="anchor" href="#help-keyword-for-cli-generators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help keyword for CLI generators</h1>
+
+<ul>
+<li>Now if you need any help just type </li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ elham <span class="pl-c1">help</span> build:keyword </pre></div>
+
+<ul>
+<li>All the commands check the existing ones as well for simplicity.</li>
+</ul>
+
+<h1>
+<a id="elham-templating-engines" class="anchor" href="#elham-templating-engines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Templating Engines</h1>
+
+<ul>
+<li>Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
+will need to install <a href="http://twig.sensiolabs.org/">TWIG</a> by the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ composer require twig/twig</pre></div>
+
+<h1>
+<a id="elham-migrations" class="anchor" href="#elham-migrations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Migrations</h1>
+
+<ul>
+<li>As Elham used <a href="https://phinx.org/">Phinx</a> for migrations, so to use phinx command just run from the terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias phinx='./phinx'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bash_aliases <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">source</span> <span class="pl-k">~</span>/.bash_aliases</pre></div>
+
+<ul>
+<li>Now you'll be able to run phinx command. To make sure phinx running perfectly, run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ phinx</pre></div>
+
+<ul>
+<li>You'll get the list of <a href="https://phinx.org/">Phinx</a> command. To use phinx, first initialize it by the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ phinx init</pre></div>
+
+<ul>
+<li>A phinx.yml file will be generated. You need to customize it. Sample customization for development listed below</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ environments:
+$ default_database: development
+$ development:
+          adapter: sqlite
+          host: localhost
+          name: db/database.sqlite
+          user: root
+          pass: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+          port: 3306
+          charset: utf8</pre></div>
+
+<ul>
+<li>Phinx uses CamelCase for its functioning &amp; it'll store the migrations &amp; seeding inside db/migration &amp; db/seeds directory respectively.
+So if you wanna create a migration for Students table, just run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ phinx create Students</pre></div>
+
+<ul>
+<li>A new unique migration for Students will be generated inside db/migrations directory of Elham like below</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ use Phinx<span class="pl-cce">\M</span>igration<span class="pl-cce">\A</span>bstractMigration<span class="pl-k">;</span>
+$ class Students extends AbstractMigration
+$  { 
+$       public <span class="pl-k">function</span> <span class="pl-en">change()</span>
+$       {
+$   
+$       }
+$   }</pre></div>
+
+<ul>
+<li>Now we not gonna use the change method for the migration. Beside we'll create two methods up() &amp; down() for our migration &amp; rollback. So for that
+we gonna code a bit something like below. Say we've our student table consisting with roll &amp; name.</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ use Phinx<span class="pl-cce">\M</span>igration<span class="pl-cce">\A</span>bstractMigration<span class="pl-k">;</span>
+$ class Students extends AbstractMigration
+$  { 
+$       public <span class="pl-k">function</span> <span class="pl-en">up()</span>
+$       {
+$            <span class="pl-smi">$students</span> = <span class="pl-smi">$this</span>-<span class="pl-k">&gt;</span>table(<span class="pl-s"><span class="pl-pds">'</span>students<span class="pl-pds">'</span></span>)<span class="pl-k">;</span>
+$            <span class="pl-smi">$students</span>-<span class="pl-k">&gt;</span>addColumn(<span class="pl-s"><span class="pl-pds">'</span>name<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>string<span class="pl-pds">'</span></span>,[<span class="pl-s"><span class="pl-pds">'</span>length<span class="pl-pds">'</span></span><span class="pl-k">=&gt;</span>100])
+$                     -<span class="pl-k">&gt;</span>addColumn(<span class="pl-s"><span class="pl-pds">'</span>roll<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>string<span class="pl-pds">'</span></span>)
+$                     -<span class="pl-k">&gt;</span><span class="pl-en">create</span>();
+$       }
+$       public <span class="pl-k">function</span> <span class="pl-en">down()</span>
+$       {
+$           <span class="pl-smi">$this</span>-<span class="pl-k">&gt;</span>dropTable(<span class="pl-s"><span class="pl-pds">'</span>students<span class="pl-pds">'</span></span>)<span class="pl-k">;</span>
+$       }
+$
+$   }</pre></div>
+
+<ul>
+<li>Now to migrate, run from terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ phinx migrate</pre></div>
+
+<ul>
+<li>It'll affect our default db/databse.sqlite hopefully. Now to rollback, just run from terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ phinx rollback</pre></div>
+
+<ul>
+<li>To explore more about Phinx, please read the <a href="http://docs.phinx.org/en/latest/">documentation</a>. </li>
+</ul>
+
+<h1>
+<a id="elham-playground" class="anchor" href="#elham-playground" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Playground</h1>
+
+<ul>
+<li>Elham also used <a href="http://psysh.org/">Psyshell</a> for tinkering with its functionalities, so to use psysh command just run from the terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias psysh='./psysh'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bash_aliases <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">source</span> <span class="pl-k">~</span>/.bash_aliases</pre></div>
+
+<ul>
+<li>Now if you wanna tinkering with psyshell just run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ psysh</pre></div>
+
+<ul>
+<li>You'll be into the Psyshell now. If you wanna start toying around then first initialize the proper environment. To init the environment, run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$enviornment</span> = new Dotenv<span class="pl-cce">\D</span>otenv(__DIR__)<span class="pl-k">;</span>
+$ <span class="pl-smi">$environment</span><span class="pl-en">-&gt;load</span>();</pre></div>
+
+<ul>
+<li>To init the database with eloquent, run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$db</span> = new config<span class="pl-cce">\d</span>atabase<span class="pl-k">;</span></pre></div>
+
+<ul>
+<li>Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$db</span><span class="pl-en">-&gt;connectThroughCapsule</span>(); </pre></div>
+
+<ul>
+<li>And if you wanna query through PDO, create an instance of the PDO</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$db</span><span class="pl-en">-&gt;connectThroughPDO</span>(); </pre></div>
+
+<ul>
+<li>Now if you wanna play with User model, create an object of User by running in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$user</span> = new Elham<span class="pl-cce">\M</span>odel<span class="pl-cce">\U</span>ser<span class="pl-k">;</span></pre></div>
+
+<ul>
+<li>To get all data from User model, just run in terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-smi">$user</span><span class="pl-en">-&gt;all()-&gt;toArray</span>();</pre></div>
+
+<ul>
+<li>You can run every bit of eloquent &amp; pdo queries along with other functionalities through <a href="http://psysh.org/">Psyshell</a>.</li>
+</ul>
+
+<h1>
+<a id="elham-frontend-housekeeping" class="anchor" href="#elham-frontend-housekeeping" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Frontend Housekeeping</h1>
+
+<ul>
+<li>Elham used <a href="http://gulpjs.com/">Gulp</a> for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on &amp; so forth. To use gulp, first install node js by the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo apt-get install npm</pre></div>
+
+<ul>
+<li>After that we need to install gulp globaly by the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo npm install -g gulp</pre></div>
+
+<ul>
+<li>As pacakge.json already ships with Elham. So you don't have to create it. To install gulp just run the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo npm install gulp --save-dev</pre></div>
+
+<ul>
+<li>The way Gulp work is - Everything is split into various plugins. So each plugin does one job &amp; one job only. And that way we can pipe the output of one function to another. So we can say - Let's autoprefix this file &amp; then minify it &amp; then output it some file &amp; then finally provide some sort of notifications. All of that stuff is really easy with Gulp.</li>
+<li>So if we want to use plugins, we need to install some.
+Lets install, just to get started, How about minifying our css
+We can do that by running into terminal</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo npm install gulp-clean-css --save-dev</pre></div>
+
+<h1>
+<a id="elham-zero-second-deployment" class="anchor" href="#elham-zero-second-deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Zero Second Deployment</h1>
+
+<ul>
+<li>Elham proudly compatibles with <a href="https://ngrok.com/">ngrok</a>. So you can deploy it less than a second.
+For that you'll have to install node &amp; nodejs-legacy by the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo apt-get install node
+$ sudo apt install nodejs-legacy</pre></div>
+
+<ul>
+<li>After that we gonna install ngrok through (npm)node package manager globally</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ sudo npm install ngrok -g</pre></div>
+
+<ul>
+<li>Now we gonna deploy our project by just running the following command</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>$ ngrok http 8000</pre></div>
+
+<ul>
+<li>Make sure you are running your project through port 8000. If you are using other port, then use
+that port to ngrok</li>
+</ul>
+
+<h1>
+<a id="elham-production-deployment" class="anchor" href="#elham-production-deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elham Production Deployment</h1>
+
+<ul>
+<li>Don't worry it also supports any repo(Github,Gitlab,Bitbucket....) and any CI (Jenkins) and any server(Linux Distro. preferred) in deployment.</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
