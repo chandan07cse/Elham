@@ -56,13 +56,13 @@ class HomeController extends BaseController{
             $imageName = $username.'.' . $image->getClientOriginalExtension();//renaming image
             $image->move('images', $imageName);
             /*
-             * Mail Through Sendgrid
+             * Mail Through Swiftmailer
              * from,to & body is mandatory here
              * Here template,templateData & attachment is optional
              * */
             $from = 'sysadmin@elham.rocks';
             $to = $email;
-            $subject = 'Testing Elham Email Through Sendgrid';
+            $subject = 'Testing Elham Email Through Swiftmailer';
             $body = "Dear {$username}, Greetings from Elham";
             $template = "email/test.html";
             $templateData = ['name'=>$username,'email'=>$to,'address'=>'33, Shahid Sorhawardi College Road'];
@@ -94,10 +94,9 @@ class HomeController extends BaseController{
         $this->bladeView('UserShow',compact('users'));
     }
 
-    public function edit(Request $request)
+    public function edit($id)
     {
-        $userId = $request->get('id');
-        $userData = $this->user->getSpecificUser($userId);
+        $userData = $this->user->getSpecificUser($id);
         $this->bladeView('UserEdit',compact('userData'));
     }
 
@@ -129,10 +128,9 @@ class HomeController extends BaseController{
         }
     }
 
-    public function delete(Request $request)
+    public function delete($id)
     {
-        $userId = $request->get('id');
-        $delete = $this->user->remove($userId);
+        $delete = $this->user->remove($id);
         if($delete)
             $this->redirect('/user/show?message=User Deleted Successfully');
     }

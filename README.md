@@ -2,6 +2,7 @@
 Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
 ### Version
 1.0.0
+![alt tag](https://github.com/chandan07cse/Elham/blob/development/public/images/version_eye_elham.png)
 ### Installation
 - First install composer globally(if you don't have it) by running the following commands
 ```sh
