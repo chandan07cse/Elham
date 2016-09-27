@@ -3,6 +3,7 @@ namespace Elham\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Philo\Blade\Blade;
 
 class BaseController
@@ -31,20 +32,13 @@ class BaseController
         echo $blade->view()->make($template,$params)->render();
     }
 
-    public function redirect($route,$errorBag=null,$oldInputValues=null)
+    public function redirect($route)
     {
-        if($errorBag==null && $oldInputValues==null)
-            header('location:'.$route);
-        elseif($errorBag!=null && $oldInputValues==null)
-            header('location:'.$route.'?errorBag='.json_encode($errorBag));
-        elseif($errorBag==null && $oldInputValues!=null)
-            header('location:'.$route.'?oldInputs='.json_encode($oldInputValues));
-        else
-        header('location:'.$route.'?errorBag='.json_encode($errorBag).'&oldInputs='.json_encode($oldInputValues));
-
+        header('location:'.$route);
+        return $this;
     }
 
-    public function SendMail($from,$to,$subject,$body,$template=null,$datumn=[],$attachment=null)
+    public function sendEmail($from,$to,$subject,$body,$template=null,$datumn=[],$attachment=null)
     {
 
         $transport = \Swift_SmtpTransport::newInstance(getenv('MAIL_HOST'),getenv('MAIL_PORT'), getenv('MAIL_ENCRYPTION'))
@@ -67,5 +61,42 @@ class BaseController
         $message->attach(\Swift_Attachment::fromPath($attachment,'Attachment'));
 
        return $mailer->send($message);
+    }
+    public function setFlash($name, $message, $class)
+    {
+        $session = new Session();
+
+        if(!$session->getId())
+           $session->start();
+
+        $session->getFlashBag()->add($name,  array(
+            'class' => $class,
+            'message' => $message
+        ));
+
+    }
+
+    public static function getFlash($flashKey)
+    {
+        $session = new Session();
+        foreach ($session->getFlashBag()->get($flashKey, array()) as $value)
+         echo "<div class='{$value['class']}' id='flashing'>{$value['message']}</div>";
+
+    }
+    public function with($values=[])
+    {
+        $session = new Session();
+        if(!$session->getId())
+            $session->start();
+        foreach($values as $key=>$value)
+             $session->getFlashBag()->add($key,$value);
+    }
+
+    public static function getWith($withKey)
+    {
+        $session = new Session();
+        foreach ($session->getFlashBag()->get($withKey, array()) as $values)
+            $values = json_decode($values);
+        return @$values;
     }
 }

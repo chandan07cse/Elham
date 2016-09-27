@@ -23,6 +23,7 @@
         $db->connectThroughCapsule();
         $db->connectThroughPDO();
     }
+
     // Form the request from all possible sources - $_GET, $_POST, $_FILE, $_COOKIE, $_SESSION
     $request = Request::createFromGlobals();
 

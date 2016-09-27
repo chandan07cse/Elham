@@ -8,9 +8,9 @@
             text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
         }
         body {
-            background: #ff9c08;
             color: #fff;
-        }
+            align-items: center;
+            }
         a {
             color:#fff;
         }
@@ -23,8 +23,9 @@
             margin-top: 5%;
         }
     </style>
-    <div class="container">
+        <div class="container">
         @include('_partials.svg')
         <h1>{{$me}}</h1><p>{{$message}}</p>
-    </div>
+        </div>
+
 @endsection

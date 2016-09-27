@@ -30,13 +30,10 @@
     },
     "autoload":{
         "psr-4":{
-            "Elham\\": "app/",
-            "config\\": "config/",
-            "database\\": "database/",
-            "commands\\": "commands/"
-                },
-        "classmap": [
-            "app/Model/"
-        ]
+                "Elham\\": "app/",
+                "config\\": "config/",
+                "database\\": "database/",
+                "commands\\": "commands/"
+                }
     }
 }

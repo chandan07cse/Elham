@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class User extends Eloquent{
     use PDO;
-    protected $fillable=['username','email','password','image'];//remember the format
+    protected $fillable=['username','email','password','image','activation_code','active'];//remember the format
     protected $userName,$email,$passWord,$imageName;
     public $timestamps = false;
     public function setUserName($userName)
@@ -31,7 +31,7 @@ class User extends Eloquent{
 
     public function setPassWord($passWord)
     {
-        $this->passWord = $passWord;
+        $this->passWord = md5($passWord);
     }
 
     public function getPassWord()
@@ -47,6 +47,16 @@ class User extends Eloquent{
     public function getImageName()
     {
         return $this->imageName;
+    }
+
+    public function exists()
+    {
+        return User::where('email',$this->getEmail())->first();
+    }
+
+    public function checkExistenceForLogin()
+    {
+        return User::where([['email',$this->getEmail()],['password',$this->getPassWord()]])->first();
     }
     public function insert()
     {
@@ -64,17 +74,46 @@ class User extends Eloquent{
 //           'password'=>'chandan07cse@!',
 //           'image'=>'images/me.jpg'
 //       ]);
-        $command = $this->pdo()->prepare("insert into users values (:id,:username,:password,:email,:image)");
+        $command = $this->pdo()->prepare("insert into users values (:id,:username,:password,:email,:image,:activation_code,:active)");
         $command = $command->execute(array(
             ':id'=>null,
             ':username'=>$this->getUserName(),
             ':password'=>$this->getPassWord(),
             ':email'=>$this->getEmail(),
-            ':image'=>$this->getImageName()
+            ':image'=>$this->getImageName(),
+            ':activation_code'=>md5( rand(0,1000)),
+            ':active'=>0
         ));
         return $command ? true : false;
     }
 
+    public function getActivationCodeByEmail()
+    {
+        $get = User::where('email',$this->getEmail())
+                                      ->first(['activation_code']);
+        return $get->activation_code;
+    }
+
+    public function activate($mail,$token)
+    {
+        $exists = User::where([['email',$mail],['activation_code',$token]])->first();
+        if($exists) {
+            //update the active state to 1
+            User::where('email', $mail)
+                ->update(
+                    [
+                        'active' => 1
+                    ]
+                );
+            return true;
+        }
+        else
+            // do nothing & false return
+            return false;
+
+
+
+    }
     public function getAll()
     {
         return User::all()->toArray();
@@ -102,4 +141,10 @@ class User extends Eloquent{
         return User::find($userId)->delete();
 
     }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class,'user_id','id');
+    }
+
 }
