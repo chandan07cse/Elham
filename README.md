@@ -1,6 +1,5 @@
 # Elham - Inspiring You The Next - A Product Of UROSD Lab
 Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
-![alt tag](https://github.com/chandan07cse/Elham/blob/development/public/images/version_eye_elham.png)
 ### Version 1.0.0
 ### Installation
 - First install composer globally(if you don't have it) by running the following commands
@@ -29,6 +28,8 @@ $ cd ../
 ```sh
 $ composer info
 ```
+# Visual Dependencies 
+- To check the visual dependencies of different version, please go to the link [Visual Dependecies](https://www.versioneye.com/php/chandan07cse:elham/1.0.0/visual_dependencies)
 # Elham Command Alias
 - Let's run the below command to run elham command
 ```sh
