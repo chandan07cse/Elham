@@ -3,8 +3,8 @@
 .idea
 composer.lock
 app/Controller/cache/*
-public/css/development
-public/js/development
+public/css/production
+public/js/production
 phinx.yml
 .env
 
