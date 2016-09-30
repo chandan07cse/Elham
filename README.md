@@ -207,7 +207,7 @@ we gonna code a bit something like below. Say we've our student table consisting
  }
 ```
 
-# Elham Playground :soccer::basketball::football::baseball::tennis:
+# :soccer::basketball::football::baseball::tennis: Elham Playground 
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
  echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
