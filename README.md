@@ -176,6 +176,7 @@ we gonna code a bit something like below. Say we've our student table consisting
    :one: Manual Seeding
 
    :two: Faker Seeding
+   
 :small_blue_diamond: For Manual Seeding we can write something like this in UserSeeder class
 ```sh
  <?php
