@@ -4,7 +4,7 @@ var jsmin = require('gulp-jsmin');
 
 //css minification
 gulp.task('minify-css', function () {
-    return gulp.src('public/css/development/*.css')
+    return gulp.src('public/css/development/style.css')
                .pipe(cleanCSS({debug: true}, function(details) {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
@@ -14,7 +14,7 @@ gulp.task('minify-css', function () {
 
 //js minification
 gulp.task('minify-js', function () {
-    gulp.src('public/js/development/*.js')
+    gulp.src('public/js/development/script.js')
         .pipe(jsmin())
         .pipe(gulp.dest('public/js/production/'));
 });
@@ -30,15 +30,15 @@ gulp.task('default',function(){
     * in any css within development directory
     * gulp'll watch & fire minification
     * */
-   gulp.watch('public/css/development/*.css',function(){
-        gulp.run('minify-css')
-    });
+   //gulp.watch('public/css/development/*.css',function(){
+   //     gulp.run('minify-css')
+   // });
     /*
      * watcher added so if there's a change
      * in any js within development directory
      * gulp'll watch & fire minification
      * */
-    gulp.watch('public/js/development/*.js',function(){
-        gulp.run('minify-js')
-    });
+    //gulp.watch('public/js/development/*.js',function(){
+    //    gulp.run('minify-js')
+    //});
 });
