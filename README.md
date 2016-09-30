@@ -23,7 +23,7 @@
 ```sh
  cd ../
 ```
-# :electric_plug: Dependencies
+# :package: Dependencies
 - To check the list of dependencies Elham relies, run the command
 ```sh
  composer info
