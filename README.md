@@ -40,7 +40,7 @@
 ```sh
  elham
 ```
-# Build Controller Through CLI
+# :violin: Build Controller Through CLI
 - Elham provides you the build:controller command
 ```sh
  elham build:controller YourController
@@ -50,45 +50,45 @@
 ```sh
  elham build:controller YourController plain
 ```
-# Build Model Through CLI
+# :guitar: Build Model Through CLI
 - Elham also provides you build:model command
 ```sh
  elham build:model YourModel
 ```
-# Build Form Through CLI
+# :saxophone: Build Form Through CLI
 - Elham ships with build:form command
 ```sh
  elham build:form YourForm
 ```
 - A dummy blade form will be generated inside app/Views/_partials directory.
 
-# Build Validator Through CLI
+# :musical_score: Build Validator Through CLI
 - Elham also provides you build:validator command
 ```sh
  elham build:validator YourValidator
 ```
 - A validation class will be generated inside app/Validation directory.
 
-# Help keyword for CLI generators
+# :microphone: Help keyword for CLI generators
 - Now if you need any help just type
 ```sh
  elham help build:keyword
 ```
 - All the commands check the existing ones as well for simplicity.
 
-# Elham Templating Engines
+# :necktie: :dress: Elham Templating Engines
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install [TWIG](http://twig.sensiolabs.org/) by the following command
 ```sh
  composer require twig/twig
 ```
 
-# Elham Migrations & Seeding
-- As Elham used [Phinx](https://phinx.org/) for migrations:palm_tree: & seeding:seedling:, so to use phinx command just run from the terminal
+# :palm_tree: :seedling: Elham Migrations & Seeding
+- As Elham used [Phinx](https://phinx.org/) for migrations & seeding, so to use phinx command just run from the terminal
 ```sh
- echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
-```
-- Now you'll be able to run phinx command. To make sure phinx running perfectly, run in terminal
+ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/ing perfec .bash_aliases
+:palm_tree:
+- Now you'll be able to run phinx command. To make sure phinx runntly, run in terminal
 ```sh
  phinx
 ```
@@ -109,7 +109,7 @@ will need to install [TWIG](http://twig.sensiolabs.org/) by the following comman
           port: 3306
           charset: utf8
 ```
-- Phinx uses CamelCase for its functioning & it'll store the migrations & seeding inside db/migration & db/seeds directory respectively.
+- Phinx uses :camel: CamelCase for its functioning & it'll store the migrations & seeding inside db/migration & db/seeds directory respectively.
 So if you wanna create a migration for Students table, just run in terminal
 ```sh
  phinx create Students
