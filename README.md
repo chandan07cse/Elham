@@ -1,7 +1,7 @@
 # Elham - Inspiring You The Next - A Product Of UROSD Lab
-:rocket: Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
+:loudspeaker: Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new :rocket:
 ### :beginner: Version 1.0.0
-### :feet: Installation
+### :feet: Installation:rocket:
 - First install composer globally(if you don't have it) by running the following commands
 ```sh
  curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
