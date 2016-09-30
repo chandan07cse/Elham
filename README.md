@@ -170,7 +170,7 @@ $
 $    }
 $ }
 ```
-- Actually we can seed in :soccer::v: ways.
+- Actually we can seed in :v: ways.
 - [x] Manual Seeding 
 - [x] Faker Seeding 
 
