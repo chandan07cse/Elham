@@ -244,7 +244,7 @@ class UserSeeder extends AbstractSeed
 ```
 
 # :soccer::basketball::football::baseball::tennis: Elham Playground
-- Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
+- Elham also uses [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
  echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
