@@ -174,7 +174,7 @@ $ }
 - [x] Manual Seeding 
 - [x] Faker Seeding
 
-# Elham Playground :golfer:
+# Elham Playground :soccer::basketball::football::baseball::tennis::person_with_ball::cricket_bat_and_ball:
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
 $ echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
