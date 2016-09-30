@@ -171,7 +171,7 @@ we gonna code a bit something like below. Say we've our student table consisting
     }
  }
 ```
-:radio_button: Actually we can seed in :v: ways.
+:small_blue_diamond: Actually we can seed in :v: ways.
 
    :one: Manual Seeding
 
