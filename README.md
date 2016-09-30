@@ -3,9 +3,9 @@ Let's build together by not reinventing the wheel but assembling the wheels to r
 ### Version 1.0.0
 ### Installation
 - First install composer globally(if you don't have it) by running the following commands
-
-    curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
-
+```sh
+ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
+```
 - Then install Elham by the following command(for latest stable releases)
 ```sh
  composer create-project chandan07cse/elham YOUR_PROJECT_NAME
@@ -147,7 +147,7 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - Now to migrate, run from terminal
 ```sh
- phinx migrate
+    phinx migrate
 ```
 - It'll affect our default db/databse.sqlite hopefully. Now to rollback, just run from terminal
 ```sh
@@ -159,7 +159,7 @@ we gonna code a bit something like below. Say we've our student table consisting
  phinx seed:create UserSeeder
 ```
 - We'll get the UserSeeder class inside db/seeds directory. Inside there, we'll get 
-
+```sh
      <?php
      use Phinx\Seed\AbstractSeed;
      class UserSeeder extends AbstractSeed
@@ -169,7 +169,7 @@ we gonna code a bit something like below. Say we've our student table consisting
     
         }
      }
-
+```
 :radio_button: Actually we can seed(:seedling:) in :v: ways.
 
    :one: Manual Seeding
