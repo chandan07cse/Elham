@@ -28,7 +28,7 @@ Let's build together by not reinventing the wheel but assembling the wheels to r
 ```sh
  composer info
 ```
-# Visual Dependencies 
+# Visual Dependencies
 - To check the visual dependencies, please go to the link [Visual Dependecies](https://www.versioneye.com/php/chandan07cse:elham/1.0.0/visual_dependencies)
 
 # Elham Command Alias
@@ -56,27 +56,27 @@ Let's build together by not reinventing the wheel but assembling the wheels to r
  elham build:model YourModel
 ```
 # Build Form Through CLI
-- Elham ships with build:form command 
+- Elham ships with build:form command
 ```sh
  elham build:form YourForm
 ```
 - A dummy blade form will be generated inside app/Views/_partials directory.
 
 # Build Validator Through CLI
-- Elham also provides you build:validator command 
+- Elham also provides you build:validator command
 ```sh
  elham build:validator YourValidator
 ```
 - A validation class will be generated inside app/Validation directory.
 
 # Help keyword for CLI generators
-- Now if you need any help just type 
-```sh 
- elham help build:keyword 
-``` 
+- Now if you need any help just type
+```sh
+ elham help build:keyword
+```
 - All the commands check the existing ones as well for simplicity.
 
-# Elham Templating Engines 
+# Elham Templating Engines
 - Elham ships with Blade and Plain view for rendering its View. But if you want you can use twig too. For that you
 will need to install [TWIG](http://twig.sensiolabs.org/) by the following command
 ```sh
@@ -118,10 +118,10 @@ So if you wanna create a migration for Students table, just run in terminal
 ```sh
  use Phinx\Migration\AbstractMigration;
  class Students extends AbstractMigration
-  { 
+  {
        public function change()
        {
-   
+
        }
    }
 ```
@@ -130,7 +130,7 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```sh
  use Phinx\Migration\AbstractMigration;
  class Students extends AbstractMigration
-  { 
+  {
        public function up()
        {
             students = this->table('students');
@@ -147,34 +147,59 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - Now to migrate, run from terminal
 ```sh
-    phinx migrate
+   phinx migrate
 ```
 - It'll affect our default db/databse.sqlite hopefully. Now to rollback, just run from terminal
 ```sh
  phinx rollback
 ```
-- To explore more about Phinx, please read the [documentation](http://docs.phinx.org/en/latest/). 
-- Now for seeding, we just need to create the seeder class from the cli. Say, we need to create a UserSeeder to seed some datumn into users table. To create the UserSeeder class 
+- To explore more about Phinx, please read the [documentation](http://docs.phinx.org/en/latest/).
+- Now for seeding, we just need to create the seeder class from the cli. Say, we need to create a UserSeeder to seed some datumn into users table. To create the UserSeeder class
 ```sh
  phinx seed:create UserSeeder
 ```
-- We'll get the UserSeeder class inside db/seeds directory. Inside there, we'll get 
+- We'll get the UserSeeder class inside db/seeds directory. Inside there, we'll get
 ```sh
-     <?php
-     use Phinx\Seed\AbstractSeed;
-     class UserSeeder extends AbstractSeed
-     {
-        public function run()
-        {
-    
-        }
-     }
+ <?php
+ use Phinx\Seed\AbstractSeed;
+ class UserSeeder extends AbstractSeed
+ {
+    public function run()
+    {
+
+    }
+ }
 ```
 :radio_button: Actually we can seed(:seedling:) in :v: ways.
 
    :one: Manual Seeding
 
    :two: Faker Seeding
+- For Manual Seeding we can write something like this in UserSeeder class
+```sh
+ <?php
+ use Phinx\Seed\AbstractSeed;
+ class UserSeeder extends AbstractSeed
+ {
+    public function run()
+    {
+      $data = array(
+          array(
+              'username'    => 'chandan07cse',
+              'password' => md5('me'),
+              'email' => 'freak.arian@gmail.com'
+          ),
+          array(
+              'username'    => 'freakarian07',
+              'password' => md5('chandan07cse@!'),
+              'email' => 'chandan07cse@gmail.com',
+          )
+      );
+
+       $this->insert('users', $data);
+    }
+ }
+```
 
 # Elham Playground :soccer::basketball::football::baseball::tennis:
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
@@ -196,11 +221,11 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule
 ```sh
- db->connectThroughCapsule(); 
+ db->connectThroughCapsule();
 ```
 - And if you wanna query through PDO, create an instance of the PDO
 ```sh
- db->connectThroughPDO(); 
+ db->connectThroughPDO();
 ```
 - Now if you wanna play with User model, create an object of User by running in terminal
 ```sh
@@ -247,7 +272,7 @@ For that you'll have to install node & nodejs-legacy by the following command
 - Now we gonna deploy our project by just running the following command
 ```sh
  ngrok http 8000
-``` 
+```
 - Make sure you are running your project through port 8000. If you are using other port, then use
  that port to ngrok
 
