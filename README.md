@@ -187,12 +187,18 @@ we gonna code a bit something like below. Say we've our student table consisting
           array(
               'username'    => 'chandan07cse',
               'password' => md5('me'),
-              'email' => 'freak.arian@gmail.com'
+              'email' => 'freak.arian@gmail.com',
+              'image' => 'public/images/chandan07cse.jpg',
+              'activation_code' => md5(rand(0,1000)),
+              'active' => 1
           ),
           array(
-              'username'    => 'freakarian07',
-              'password' => md5('chandan07cse@!'),
-              'email' => 'chandan07cse@gmail.com',
+              'username'    => 'mamun10pgd',
+              'password' => md5('mamun10pgd@!'),
+              'email' => 'rajmamunet@gmail.com',
+               image' => 'public/images/mamun10pgd.jpg',
+              'activation_code' => md5(rand(0,1000)),
+              'active' => 0
           )
       );
 
