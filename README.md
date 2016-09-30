@@ -171,8 +171,7 @@ $    }
 $ }
 ```
 - Actually we can seed in :v: ways.
-
-:radio_button: Manual Seeding 
+:radio_button: Manual Seeding
 :radio_button: Faker Seeding
 
 # Elham Playground :soccer::basketball::football::baseball::tennis:
