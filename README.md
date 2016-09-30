@@ -154,6 +154,7 @@ we gonna code a bit something like below. Say we've our student table consisting
  phinx rollback
 ```
 :small_blue_diamond: To explore more about Phinx, please read the :link:[documentation](http://docs.phinx.org/en/latest/).
+
 :small_blue_diamond: Now for seeding, we just need to create the seeder class from the cli. Say, we need to create a UserSeeder to seed some datumn into users table. To create the UserSeeder class
 ```sh
  phinx seed:create UserSeeder
