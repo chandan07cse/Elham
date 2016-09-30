@@ -235,11 +235,11 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - Now if you wanna play with User model, create an object of User by running in terminal
 ```sh
- user = new Elham\Model\User;
+ $user = new Elham\Model\User;
 ```
 - To get all data from User model, just run in terminal
 ```sh
- user->all()->toArray();
+ $user->all()->toArray();
 ```
 - You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
