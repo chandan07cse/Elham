@@ -2,29 +2,29 @@
 :loudspeaker: Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new :rocket:
 ### :beginner: Version 1.0.0
 ### :feet: Installation
-- First install composer globally(if you don't have it) by running the following commands
+:small_blue_diamond: First install composer globally(if you don't have it) by running the following commands
 ```sh
  curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
 ```
-- Then install Elham by the following command(for latest stable releases)
+:small_blue_diamond: Then install Elham by the following command(for latest stable releases)
 ```sh
  composer create-project chandan07cse/elham YOUR_PROJECT_NAME
 ```
-- But if you want Elham from its master branch, then you could certainly type it
+:small_blue_diamond: But if you want Elham from its master branch, then you could certainly type it
 ```sh
  composer create-project chandan07cse/elham=dev-master YOUR_PROJECT_NAME
 ```
-- Now cd into your_project_name/public & run by the php command
+:small_blue_diamond: Now cd into your_project_name/public & run by the php command
 ```sh
  cd YOUR_PROJECT_NAME/public
  php -S localhost:8000
 ```
-- Note : For the rest of the project we'll run each & every command from the project directory. For that
+:small_blue_diamond: Note : For the rest of the project we'll run each & every command from the project directory. For that
 ```sh
  cd ../
 ```
 # :package: Dependencies
-- To check the list of dependencies Elham relies, run the command
+:small_blue_diamond: To check the list of dependencies Elham relies, run the command
 ```sh
  composer info
 ```
@@ -32,7 +32,7 @@
 - To check the visual dependencies, please go to the link [Visual Dependecies](https://www.versioneye.com/php/chandan07cse:elham/1.0.0/visual_dependencies)
 
 # :musical_keyboard: Elham Command Alias
-- Let's run the below command to run elham command
+:small_blue_diamond: Let's run the below command to run elham command
 ```sh
  echo "alias elham='./elham'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
