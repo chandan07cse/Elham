@@ -170,7 +170,7 @@ $
 $    }
 $ }
 ```
-:radio_button: Actually we can seed in :v: ways.
+:radio_button: Actually we can seed(:baby_bottle:) in :v: ways.
 
   :one: Manual Seeding
 
