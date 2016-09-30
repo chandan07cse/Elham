@@ -173,8 +173,7 @@ $ }
 - Actually we can seed in :v: ways.
 - [x] Manual Seeding 
 - [x] Faker Seeding 
-
-# Elham Playground
+# Elham Playground :golfer:
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
 $ echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
