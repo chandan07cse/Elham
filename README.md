@@ -207,7 +207,7 @@ we gonna code a bit something like below. Say we've our student table consisting
  }
 ```
 
-# :soccer::basketball::football::baseball::tennis: Elham Playground 
+# :soccer::basketball::football::baseball::tennis: Elham Playground
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
  echo "alias psysh='./psysh'" >> ~/.bash_aliases && source ~/.bash_aliases
@@ -243,7 +243,7 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
-# Elham Frontend Housekeeping
+# :house_with_garden: Elham Frontend Housekeeping
 - Elham used [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command
 ```sh
  sudo apt-get install npm
@@ -264,7 +264,7 @@ We can do that by running into terminal
  sudo npm install gulp-clean-css --save-dev
 ```
 
-# Elham Zero Second Deployment
+# :strawberry: Elham Zero Second Deployment
 - Elham proudly compatibles with [ngrok](https://ngrok.com/). So you can deploy it less than a second.
 For that you'll have to install node & nodejs-legacy by the following command
 ```sh
@@ -282,5 +282,5 @@ For that you'll have to install node & nodejs-legacy by the following command
 - Make sure you are running your project through port 8000. If you are using other port, then use
  that port to ngrok
 
-# Elham Production Deployment
+# :grapes: Elham Production Deployment
 - Don't worry it also supports any repo(Github,Gitlab,Bitbucket....) and any CI (Jenkins) and any server(Linux Distro. preferred) in deployment.
