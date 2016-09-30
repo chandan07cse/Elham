@@ -171,8 +171,8 @@ $    }
 $ }
 ```
 - Actually we can seed in :v: ways.
-- :radio_button: Manual Seeding 
-- :radio_button: Faker Seeding
+ :radio_button: Manual Seeding 
+ :radio_button: Faker Seeding
 
 # Elham Playground :soccer::basketball::football::baseball::tennis:
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
