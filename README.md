@@ -1,5 +1,5 @@
 # Elham - Inspiring You The Next - A Product Of UROSD Lab
-Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
+:rocket: Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new giant.
 ### Version 1.0.0
 ### Installation
 - First install composer globally(if you don't have it) by running the following commands
