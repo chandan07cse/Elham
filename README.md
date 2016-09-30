@@ -31,7 +31,7 @@
 # :flashlight: Visual Dependencies
 - To check the visual dependencies, please go to the link [Visual Dependecies](https://www.versioneye.com/php/chandan07cse:elham/1.0.0/visual_dependencies)
 
-# Elham Command Alias
+# :musical_keyboard: Elham Command Alias
 - Let's run the below command to run elham command
 ```sh
  echo "alias elham='./elham'" >> ~/.bash_aliases && source ~/.bash_aliases
