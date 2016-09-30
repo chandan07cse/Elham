@@ -283,7 +283,7 @@ class UserSeeder extends AbstractSeed
 :small_blue_diamond: You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
 # :house_with_garden: Elham Frontend Housekeeping
-:small_blue_diamond: Elham used [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command
+:small_blue_diamond: Elham uses [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command
 ```sh
  sudo apt-get install npm
 ```
