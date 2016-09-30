@@ -206,6 +206,43 @@ we gonna code a bit something like below. Say we've our student table consisting
     }
  }
 ```
+- Now run from terminal
+```sh
+phinx seed:run
+```
+If you wanna run a specific class then run
+```sh
+phinx seed:run -s UserSeeder
+```
+- For faker seeding, we can write something like this in UserSeeder class
+```sh
+<?php
+use Phinx\Seed\AbstractSeed;
+class UserSeeder extends AbstractSeed
+{
+   public function run()
+   {
+     $faker = Faker\Factory::create();
+     $data = [];
+     for ($i = 0; $i < 4; $i++) {
+         $data[] = [
+
+             'username'      => $faker->userName,
+             'password'      => md5($faker->password),
+             'email'      => $faker->email,
+             'image'      => $faker->image($dir = 'public/images',$width = 640, $height = 480),
+             'activation_code'=> $faker->randomElement(),
+             'active'      => $faker->boolean
+
+         ];
+     }
+
+     $this->insert('users', $data);
+
+      $this->insert('users', $data);
+   }
+}
+```
 
 # :soccer::basketball::football::baseball::tennis: Elham Playground
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
