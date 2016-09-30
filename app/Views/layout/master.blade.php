@@ -14,8 +14,8 @@
     <style>
     @if($_SERVER['REQUEST_URI']=='/')
         body{background-image:url('images/banner.jpg');background-size: cover;}
-        @else
-            body{background-image:url('images/banner22.jpg');background-size: cover;}
+    @else
+        body{background-image:url('images/banner22.jpg');background-size: cover;}
     @endif
     </style>
 </head>

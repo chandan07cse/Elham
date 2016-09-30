@@ -12,7 +12,7 @@
                 {{$article->caption}}
             </td>
             <td class="text-center">
-                {{$article->description}}
+                {!! $article->description !!}
             </td>
             <td class="text-center" style="word-spacing: 10px;">
                 <a href="/article/edit/{{$article->id}}" class="text-left btn btn-success" title="Edit">Edit</a>

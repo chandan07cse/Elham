@@ -48,18 +48,20 @@ class UserSeeder extends AbstractSeed
 //        );
         /*
          * As Elham ships with faker, so we can make use of that just like below
+         * To know more go to the link https://github.com/fzaninotto/Faker
          * */
 
         $faker = Faker\Factory::create();
         $data = [];
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             $data[] = [
 
-                'email'      => $faker->email,
-                'password'      => sha1($faker->password),
-
                 'username'      => $faker->userName,
-                'password'      => sha1($faker->password),
+                'password'      => md5($faker->password),
+                'email'      => $faker->email,
+                'image'      => $faker->image($dir = 'public/images',$width = 640, $height = 480),
+                'activation_code'=> $faker->randomElement(),
+                'active'      => $faker->boolean
 
             ];
         }

@@ -17,10 +17,12 @@ class UsersController extends BaseController{
 
     public function index()
     {
+
         //using eager loading
         $users = $this->user->with(['articles'=>function($q){
             $q->orderBy('id', 'desc');
         }])->find(AuthController::userId());
+
         //$users = $this->user->find(AuthController::userId());
         $this->bladeView('UserDashboard',compact('users'));
     }
@@ -61,15 +63,10 @@ class UsersController extends BaseController{
 
     public function show()
     {
-        $users = $this->user->with(['articles'=>function($q){
-            $q->orderBy('id', 'desc');
-        }])->get()->toArray();
-        $users = User::with('articles')
-            ->take(4)
+       $users = $this->user->with('articles')
+            ->take(2)//retrieve 2 users
             ->orderBy('id', 'desc')
             ->get()->toArray();
         $this->bladeView('UserShow',compact('users'));
-        //$users = $this->user->getAll();
-        //echo $users['username']. $users['articles'];
     }
 }

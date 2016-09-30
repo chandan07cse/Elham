@@ -14,8 +14,8 @@
     <style>
     <?php if($_SERVER['REQUEST_URI']=='/'): ?>
         body{background-image:url('images/banner.jpg');background-size: cover;}
-        <?php else: ?>
-            body{background-image:url('images/banner22.jpg');background-size: cover;}
+    <?php else: ?>
+        body{background-image:url('images/banner22.jpg');background-size: cover;}
     <?php endif; ?>
     </style>
 </head>

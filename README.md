@@ -83,7 +83,7 @@ will need to install [TWIG](http://twig.sensiolabs.org/) by the following comman
 $ composer require twig/twig
 ```
 
-# Elham Migrations
+# Elham Migrations & Seeding
 - As Elham used [Phinx](https://phinx.org/) for migrations, so to use phinx command just run from the terminal
 ```sh
 $ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
@@ -154,7 +154,25 @@ $ phinx migrate
 $ phinx rollback
 ```
 - To explore more about Phinx, please read the [documentation](http://docs.phinx.org/en/latest/). 
-
+- Now for seeding, we just need to create the seeder class from the cli. Say, we need to create a UserSeeder to seed some datumn into users table. To create the UserSeeder class 
+```sh
+$ phinx seed:create UserSeeder
+```
+- We'll get the UserSeeder class inside db/seeds directory. Inside there, we'll get 
+```sh
+$ <?php
+$ use Phinx\Seed\AbstractSeed;
+$ class ArticleSeeder extends AbstractSeed
+$ {
+$    public function run()
+$    {
+$
+$    }
+$ }
+```
+- Actually we can seed in 2 ways.
+- [x] Manual Seeding :soccer:
+- [x] Faker Seeding :shipit:
 # Elham Playground
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
