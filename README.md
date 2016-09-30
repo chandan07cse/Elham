@@ -46,6 +46,7 @@
  elham build:controller YourController
 ```
 :small_blue_diamond: Check it by finding it in app/Controller directory of your project.
+
 :small_blue_diamond: By default elham generates resourceful controller. But if you want you can always make a plain controller by running
 ```sh
  elham build:controller YourController plain
