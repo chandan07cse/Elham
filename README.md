@@ -196,7 +196,7 @@ we gonna code a bit something like below. Say we've our student table consisting
               'username'    => 'mamun10pgd',
               'password' => md5('mamun10pgd@!'),
               'email' => 'rajmamunet@gmail.com',
-               image' => 'public/images/mamun10pgd.jpg',
+              'image' => 'public/images/mamun10pgd.jpg',
               'activation_code' => md5(rand(0,1000)),
               'active' => 0
           )
