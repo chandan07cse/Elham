@@ -160,21 +160,21 @@ $ phinx seed:create UserSeeder
 ```
 - We'll get the UserSeeder class inside db/seeds directory. Inside there, we'll get 
 ```sh
-$ <?php
-$ use Phinx\Seed\AbstractSeed;
-$ class UserSeeder extends AbstractSeed
-$ {
-$    public function run()
-$    {
-$
-$    }
-$ }
+ <?php
+ use Phinx\Seed\AbstractSeed;
+ class UserSeeder extends AbstractSeed
+ {
+    public function run()
+    {
+
+    }
+ }
 ```
 :radio_button: Actually we can seed(:baby_bottle:) in :v: ways.
 
-    :one: Manual Seeding
+   :one: Manual Seeding
 
-    :two: Faker Seeding
+   :two: Faker Seeding
 
 # Elham Playground :soccer::basketball::football::baseball::tennis:
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
