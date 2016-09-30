@@ -162,7 +162,7 @@ $ phinx seed:create UserSeeder
 ```sh
 $ <?php
 $ use Phinx\Seed\AbstractSeed;
-$ class ArticleSeeder extends AbstractSeed
+$ class UserSeeder extends AbstractSeed
 $ {
 $    public function run()
 $    {
@@ -170,9 +170,10 @@ $
 $    }
 $ }
 ```
-- Actually we can seed in 2 ways.
-- [x] Manual Seeding :soccer:
-- [x] Faker Seeding :shipit:
+- Actually we can seed in :soccer::v: ways.
+- [x] Manual Seeding 
+- [x] Faker Seeding 
+
 # Elham Playground
 - Elham also used [Psyshell](http://psysh.org/) for tinkering with its functionalities, so to use psysh command just run from the terminal
 ```sh
