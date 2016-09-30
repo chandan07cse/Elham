@@ -87,7 +87,7 @@ will need to install [TWIG](http://twig.sensiolabs.org/) by the following comman
 - As Elham used [Phinx](https://phinx.org/) for migrations & seeding, so to use phinx command just run from the terminal
 ```sh
  echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/ing perfec .bash_aliases
-:palm_tree:
+```
 - Now you'll be able to run phinx command. To make sure phinx runntly, run in terminal
 ```sh
  phinx
@@ -133,14 +133,14 @@ we gonna code a bit something like below. Say we've our student table consisting
   {
        public function up()
        {
-            students = this->table('students');
-            students->addColumn('name','string',['length'=>100])
+            $students = $this->table('students');
+            $students->addColumn('name','string',['length'=>100])
                      ->addColumn('roll','string')
                      ->create();
        }
        public function down()
        {
-           this->dropTable('students');
+           $this->dropTable('students');
        }
 
    }
@@ -218,20 +218,20 @@ we gonna code a bit something like below. Say we've our student table consisting
 ```
 - You'll be into the Psyshell now. If you wanna start toying around then first initialize the proper environment. To init the environment, run in terminal
 ```sh
- enviornment = new Dotenv\Dotenv(__DIR__);
- environment->load();
+ $enviornment = new Dotenv\Dotenv(__DIR__);
+ $environment->load();
 ```
 - To init the database with eloquent, run in terminal
 ```sh
- db = new config\database;
+ $db = new config\database;
 ```
 - Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule
 ```sh
- db->connectThroughCapsule();
+ $db->connectThroughCapsule();
 ```
 - And if you wanna query through PDO, create an instance of the PDO
 ```sh
- db->connectThroughPDO();
+ $db->connectThroughPDO();
 ```
 - Now if you wanna play with User model, create an object of User by running in terminal
 ```sh
