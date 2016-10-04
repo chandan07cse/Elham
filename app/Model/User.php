@@ -94,7 +94,7 @@ class User extends Eloquent{
             ':active'=>0
         ));
 
-        return $this->pdo->lastInsertId() ;
+        return $this->pdo->lastInsertId();
     }
 
 
