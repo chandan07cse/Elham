@@ -1,27 +1,24 @@
 <?php
-
     // Load the auto loader
     require_once __DIR__ . '/../vendor/autoload.php';
-
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Routing\RequestContext;
     use Symfony\Component\Routing\Matcher\UrlMatcher;
     use Symfony\Component\HttpKernel\Controller\ControllerResolver;
     use Elham\Elham\Core;
-    use config\database;
+    use config\Database;
 
     $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
     $dotenv->load();
 
-    $db = new database();
     if(getenv('DB_INTERACT')=='Eloquent')
-        $db->connectThroughCapsule();//init Eloquent & Query Builder Throuh Capsule
+        Database::eloquent();//init Eloquent & Query Builder Through Capsule
     elseif(getenv('DB_INTERACT')=='PDO')
-        $db->connectThroughPDO();//init PDO
+        Database::pdo();//init PDO
     elseif (getenv('DB_INTERACT')=='Eloquent&PDO') {
-        $db->connectThroughCapsule();
-        $db->connectThroughPDO();
+        Database::eloquent();
+        Database::pdo();
     }
 
     // Form the request from all possible sources - $_GET, $_POST, $_FILE, $_COOKIE, $_SESSION

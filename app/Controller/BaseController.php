@@ -73,7 +73,7 @@ class BaseController
             'class' => $class,
             'message' => $message
         ));
-
+        return $this;
     }
 
     public static function getFlash($flashKey)
@@ -90,6 +90,7 @@ class BaseController
             $session->start();
         foreach($values as $key=>$value)
              $session->getFlashBag()->add($key,$value);
+        return $this;
     }
 
     public static function getWith($withKey)

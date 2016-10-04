@@ -1,11 +1,15 @@
 <?php
 namespace Elham\Model;
-use Carbon\Carbon;
-use config\PDO;//For PDO Queries
+use config\Database;//For PDO Queries
 use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class User extends Eloquent{
-    use PDO;
+
+    protected $pdo;
+    public function __construct()
+    {
+        $this->pdo = Database::pdo();
+    }
     protected $fillable=['username','email','password','image','activation_code','active'];//remember the format
     protected $userName,$email,$passWord,$imageName;
     public $timestamps = false;
@@ -66,6 +70,7 @@ class User extends Eloquent{
 //            'email'=>$this->getEmail(),
 //            'image'=>$this->getImageName()
 //        ]);
+//        return $command->id;
 //        using Query Builder
 //       $command = Capsule::table('forms')->insert([
 //           'id'=>null,
@@ -74,8 +79,12 @@ class User extends Eloquent{
 //           'password'=>'chandan07cse@!',
 //           'image'=>'images/me.jpg'
 //       ]);
-        $command = $this->pdo()->prepare("insert into users values (:id,:username,:password,:email,:image,:activation_code,:active)");
-        $command = $command->execute(array(
+        //$db = new \PDO('sqlite:' . __DIR__ . '/../../db/' . getenv('DB_DATABASE') . '.sqlite');
+        //$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
+        $command = $this->pdo->prepare("insert into users values (:id,:username,:password,:email,:image,:activation_code,:active)");
+
+        $command->execute(array(
             ':id'=>null,
             ':username'=>$this->getUserName(),
             ':password'=>$this->getPassWord(),
@@ -84,8 +93,10 @@ class User extends Eloquent{
             ':activation_code'=>md5( rand(0,1000)),
             ':active'=>0
         ));
-        return $command ? true : false;
+
+        return $this->pdo->lastInsertId() ;
     }
+
 
     public function getActivationCodeByEmail()
     {
@@ -116,7 +127,12 @@ class User extends Eloquent{
     }
     public function getAll()
     {
-        return User::all()->toArray();
+        //return User::all()->toArray();
+        $getAll = $this->pdo()->prepare("select * from users");
+        $getAll->execute();
+        return $getAll->fetch(\PDO::FETCH_ASSOC);
+
+
     }
 
     public function getSpecificUser($userId)

@@ -5,6 +5,7 @@ use Symfony\Component\Routing\Route;
 $routes = new RouteCollection();
 //home routes
 $routes->add('Home', new Route('/', array('_controller' => 'Elham\\Controller\\HomeController::index')));
+$routes->add('AllUser', new Route('/user', array('_controller' => 'Elham\\Controller\\HomeController::getAllUser')));
 //registration routes
 $routes->add('RegistrationView', new Route('/user/create', array('_controller' => 'Elham\\Controller\\RegistrationController::create')));
 $routes->add('UserStore', new Route('/user/store', array('_controller' => 'Elham\\Controller\\RegistrationController::store')));

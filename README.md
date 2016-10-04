@@ -262,15 +262,11 @@ class UserSeeder extends AbstractSeed
 ```
 :small_blue_diamond: To init the database with eloquent, run in terminal
 ```sh
- $db = new config\database;
+ $db = new config\Database;
 ```
 :small_blue_diamond: Now if you wanna query through Eloquent/Query Builder, create an instance of the Capsule
 ```sh
- $db->connectThroughCapsule();
-```
-:small_blue_diamond: And if you wanna query through PDO, create an instance of the PDO
-```sh
- $db->connectThroughPDO();
+ $db->eloquent();
 ```
 :small_blue_diamond: Now if you wanna play with User model, create an object of User by running in terminal
 ```sh
@@ -280,6 +276,16 @@ class UserSeeder extends AbstractSeed
 ```sh
  $user->all()->toArray();
 ```
+:small_blue_diamond: And if you wanna query through PDO, create an instance of the PDO
+```sh
+ $pdo = $db->pdo();
+```
+:small_blue_diamond: If you wanna insert some data into users table using pdo, do the following
+'''sh
+$pdo =  $pdo->prepare("insert into users values(:id,:username,:email,:password,:image,:activation_code,:active)");
+$pdo->execute([':id'=>null,':username'=>'moin07cse',':password'=>'hjkkjhkjjk',':image'=>'moin.png',':activation_code'=>'dfsf',':active'=>0]);
+$pdo->fetchAll(PDO::FETCH_ASSOC);
+'''
 :small_blue_diamond: You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
 # :house_with_garden: Elham Frontend Housekeeping

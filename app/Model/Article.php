@@ -1,11 +1,11 @@
 <?php
 namespace Elham\Model;
 
-use config\PDO;//For PDO Queries
+use config\Database;//For PDO Queries
 use Illuminate\Database\Eloquent\Model as Eloquent;//For Eloquent Queries
 use Illuminate\Database\Capsule\Manager as Capsule;//For Query Builder
 class Article extends Eloquent{
-    //use PDO;//uncomment this line if you wanna use pdo queries
+
     /**
      * The attributes that are mass assignable to table
      *

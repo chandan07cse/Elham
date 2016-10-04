@@ -17,7 +17,7 @@ class HomeController extends BaseController{
     public function getAllUser()
     {
         $user = new User();
-        echo json_encode($user->getAll()) ;
+        echo json_encode($user->getAll());
 
     }
 
