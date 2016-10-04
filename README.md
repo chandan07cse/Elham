@@ -282,11 +282,12 @@ class UserSeeder extends AbstractSeed
 ```
 :small_blue_diamond: If you wanna insert some data into users table using pdo, do the following
 
-'''sh
+```sh
   $pdo =  $pdo->prepare("insert into users values(:id,:username,:email,:password,:image,:activation_code,:active)");
   $pdo->execute([':id'=>null,':username'=>'moin07cse',':password'=>'hjkkjhkjjk',':image'=>'moin.png',':activation_code'=>'dfsf',':active'=>0]);
   $pdo->fetchAll(PDO::FETCH_ASSOC);
-'''
+```
+
 :small_blue_diamond: You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
 # :house_with_garden: Elham Frontend Housekeeping
