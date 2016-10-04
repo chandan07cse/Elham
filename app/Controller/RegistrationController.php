@@ -60,7 +60,7 @@ class RegistrationController extends BaseController{
                 $this->user->setUserName($username);
                 $this->user->setPassWord($password);
                 $this->user->setImageName($imageName);
-                echo 'Last insert id : '.$this->user->insert();exit;
+
                 if($this->user->insert())
                 {
 
