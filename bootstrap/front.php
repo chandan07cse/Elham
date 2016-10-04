@@ -16,10 +16,7 @@
         Database::eloquent();//init Eloquent & Query Builder Through Capsule
     elseif(getenv('DB_INTERACT')=='PDO')
         Database::pdo();//init PDO
-    elseif (getenv('DB_INTERACT')=='Eloquent&PDO') {
-        Database::eloquent();
-        Database::pdo();
-    }
+   
 
     // Form the request from all possible sources - $_GET, $_POST, $_FILE, $_COOKIE, $_SESSION
     $request = Request::createFromGlobals();
