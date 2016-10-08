@@ -9,10 +9,7 @@ $('document').ready(function(){
     });
 
     $('#articleInputForm').on('submit', function (e) {
-
         e.preventDefault();
-        //alert($('.summernote').summernote('code'));
-        //alert($('.summernote').val());
         var caption = $('#caption').val();
         var description = $('#description').val();
         $.ajax({
@@ -24,36 +21,36 @@ $('document').ready(function(){
             },
             dataType:"json",
             success: function(response){
-                alertify.alert(response.InputConfirmation);
+              if(response.InputConfirmation)
+                alertify.alert('Thank You',response.InputConfirmation);
+                else{
                 var errorBag = JSON.parse(response.errorBag);
-                var captionErrorCount = 0;
+
+                if(errorBag.caption){
                 var captionError = "<ul class='validate_error'>";
                 $.each(errorBag.caption, function(i,item){
                     captionError += "<li>"+item+"</li>";
-                    captionErrorCount = 1;
-                });
+                    });
                 captionError +="</ul>";
-
-               if(captionErrorCount>0)
                 alertify.alert('Caption Error Occurred',captionError,function(){
                     alertify.error("Please Fix The Caption Error");
                 });
+              }
 
+              if (errorBag.description) {
                 var descriptionError = "<ul class='validate_error'>";
-                var descriptionErrorCount = 0;
                 $.each(errorBag.description, function(i,item){
                     descriptionError += "<li>"+item+"</li>";
-                    descriptionErrorCount = 1;
                 });
                 descriptionError +="</ul>";
-                if(descriptionErrorCount > 0)
-                    alertify.alert('Description Error Occurred',descriptionError,function(){
-                        alertify.error("Please Fix The Description Error");
-                    });
-                //if(response.InputConfirmation)
 
+                alertify.alert('Description Error Occurred',descriptionError,function(){
+                    alertify.error("Please Fix The Description Error");
+                });
+            }
 
             }
+          }
         });
     });
     $('input[name=image]').change(function(){
@@ -91,4 +88,3 @@ $('document').ready(function(){
 
     return false;
 });
-

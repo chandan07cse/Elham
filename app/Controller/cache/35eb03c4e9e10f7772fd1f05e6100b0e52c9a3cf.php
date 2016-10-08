@@ -5,6 +5,7 @@
     <title>Welcome To Elham</title>
     <base href="http://<?php echo e($_SERVER['HTTP_HOST']); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="css/<?php echo e(getenv('APP_ENV')); ?>/bootstrap.css" />
     <link rel="stylesheet" href="css/<?php echo e(getenv('APP_ENV')); ?>/alertify.css" />
     <link rel="stylesheet" href="css/<?php echo e(getenv('APP_ENV')); ?>/semantic.css" />
@@ -38,7 +39,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li <?php if($_SERVER['REQUEST_URI']=='/user/login'): ?> class="active" <?php endif; ?>><a href="/user/login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+                <li <?php if($_SERVER['REQUEST_URI']=='/user/login'): ?> class="active" <?php endif; ?>><a href="/user/login"><i class="material-icons valign">accessible</i>Login</a></li>
             </ul>
         </div>
     </div>

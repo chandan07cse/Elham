@@ -17,7 +17,6 @@ class UsersController extends BaseController{
 
     public function index()
     {
-
         //using eager loading
         $users = $this->user->with(['articles'=>function($q){
             $q->orderBy('id', 'desc');
@@ -67,6 +66,6 @@ class UsersController extends BaseController{
             ->take(2)//retrieve 2 users
             ->orderBy('id', 'desc')
             ->get()->toArray();
-        $this->bladeView('UserShow',compact('users'));
+       $this->bladeView('UserShow',compact('users'));
     }
 }

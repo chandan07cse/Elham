@@ -6,6 +6,7 @@
     <title>Welcome To Dashboard</title>
     <base href="http://{{$_SERVER['HTTP_HOST']}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="css/{{getenv('APP_ENV')}}/bootstrap.css" />
     <link rel="stylesheet" href="css/{{getenv('APP_ENV')}}/alertify.css" />
     <link rel="stylesheet" href="css/{{getenv('APP_ENV')}}/semantic.css" />
@@ -26,12 +27,12 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li @if($_SERVER['REQUEST_URI']=='/user/dashboard') class="active" @endif><a href="/user/dashboard">Dashboard</a></li>
+                <li @if($_SERVER['REQUEST_URI']=='/user/dashboard') class="active" @endif><a href="/user/dashboard"><i class="material-icons valign">dashboard</i>Dashboard</a></li>
                 <li @if($_SERVER['REQUEST_URI']=='/user/'.\Elham\Controller\AuthController::userId()) class="active" @endif><a href="/user/{{\Elham\Controller\AuthController::userId()}}">Profile</a></li>
                 <li @if($_SERVER['REQUEST_URI']=='/articles/input') class="active" @endif><a href="/articles/input">Input Article</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/user/logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
+                <li><a href="/user/logout"><i class="material-icons valign">power_settings_new</i>Logout</a></li>
             </ul>
         </div>
     </div>
