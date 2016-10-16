@@ -101,7 +101,7 @@ class User extends Eloquent{
     public function getActivationCodeByEmail()
     {
         $get = User::where('email',$this->getEmail())
-                                      ->first(['activation_code']);
+            ->first(['activation_code']);
         return $get->activation_code;
     }
 
@@ -143,12 +143,12 @@ class User extends Eloquent{
     public function edit($userId)
     {
         $update = User::where('id',$userId)
-                      ->update([
-                          'username' => $this->getUserName(),
-                          'password' => $this->getPassWord(),
-                          'email' => $this->getEmail(),
-                          'image' => $this->getImageName()]
-                      );
+            ->update([
+                    'username' => $this->getUserName(),
+                    'password' => $this->getPassWord(),
+                    'email' => $this->getEmail(),
+                    'image' => $this->getImageName()]
+            );
         return $update ? true : false;
     }
 

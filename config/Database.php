@@ -6,6 +6,7 @@ use Illuminate\Container\Container;
 
 class Database
 {
+
    public static function eloquent()
     {
         $capsule = new Capsule();
@@ -49,4 +50,5 @@ class Database
         }
         return $pdo;
     }
+
 }

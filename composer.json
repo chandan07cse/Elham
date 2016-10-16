@@ -32,7 +32,6 @@
         "psr-4":{
                     "Elham\\": "app/",
                     "config\\": "config/",
-                    "database\\": "database/",
                     "commands\\": "commands/"
                 }
     }
