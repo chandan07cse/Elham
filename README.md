@@ -56,6 +56,7 @@
 ```sh
  elham build:model YourModel
 ```
+:small_blue_diamond: It'll create a model with necessary properties & methods based on your database table. 
 # :saxophone: Build Form Through CLI
 :small_blue_diamond: Elham ships with build:form command
 ```sh
