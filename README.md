@@ -88,7 +88,7 @@ will need to install [TWIG](http://twig.sensiolabs.org/) by the following comman
 # :palm_tree: :seedling: Elham Migrations & Seeding
 :small_blue_diamond: As Elham used [Phinx](https://phinx.org/) for migrations & seeding, so to use phinx command just run from the terminal
 ```sh
- echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/ing perfec .bash_aliases
+ echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
 :small_blue_diamond: Now you'll be able to run phinx command. To make sure phinx runntly, run in terminal
 ```sh
