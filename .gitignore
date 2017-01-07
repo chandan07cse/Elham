@@ -5,10 +5,4 @@ composer.lock
 app/Controller/cache/*
 public/css/production
 public/js/production
-<<<<<<< HEAD
-.env
-=======
-phinx.yml
-.env
 
->>>>>>> b002b4d6218c4487b86fa8a06bf70c249f49081f
