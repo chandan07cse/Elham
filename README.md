@@ -90,7 +90,7 @@ will need to install [TWIG](http://twig.sensiolabs.org/) by the following comman
 ```sh
  echo "alias phinx='./phinx'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
-:small_blue_diamond: Now you'll be able to run phinx command. To make sure phinx running correctly, run in terminal
+:small_blue_diamond: Now you'll be able to run Phinx command. To make sure phinx running correctly, run in terminal
 ```sh
  phinx
 ```
