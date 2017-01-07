@@ -1,0 +1,8 @@
+/vendor
+/node_modules
+.idea
+composer.lock
+app/Controller/cache/*
+public/css/production
+public/js/production
+.env

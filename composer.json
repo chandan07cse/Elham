@@ -1,0 +1,38 @@
+{
+    "name": "chandan07cse/elham",
+    "description": "Inspiring You The Next - A Product Of UROSD Lab",
+    "keywords": ["Elham","Custom OOP framework", "Custom MVC framework", "Startup MVC"],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Md. Ainul Moin Noor",
+            "email": "freak.arian@gmail.com",
+            "homepage": "https://chandan07cse.github.io/Elham/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "symfony/class-loader": "3.1.*",
+        "symfony/http-foundation": "3.1.*",
+        "symfony/routing": "3.1.*",
+        "symfony/http-kernel": "3.1.*",
+        "philo/laravel-blade": "3.*",
+        "illuminate/database": "^5.2",
+        "robmorgan/phinx": "^0.6.3",
+        "respect/validation": "^1.1",
+        "vlucas/phpdotenv": "^2.3",
+        "swiftmailer/swiftmailer": "^5.4"
+    },
+    "require-dev":{
+        "fzaninotto/faker": "^1.6",
+        "psy/psysh": "@stable"
+    },
+    "autoload":{
+        "psr-4":{
+                    "Elham\\": "app/",
+                    "config\\": "config/",
+                    "commands\\": "commands/"
+                }
+    }
+}

@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 60px;
+    }
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.footer {
+
+    position: absolute;
+    margin-top: -10px;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+footer {
+    color: #FFF;
+    background-color:#5A5A5A;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 60px 15px 0;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+.validate_error{
+    font-size: 13px;color: darkred;
+}
+.success {
+    padding: 15px;
+    margin-bottom: 15px;
+    -moz-box-shadow: inset 0px 1px 0px 0px #c1ed9c;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #c1ed9c;
+    box-shadow: inset 0px 1px 0px 0px #c1ed9c;
+    background-color: #9dce2c;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #83c41a;
+    color: white;
+    font: bold 1em / 1.5em "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+    text-shadow: 1px 1px 0px #689324;
+}
+.error {
+    padding: 15px;
+    margin-bottom: 15px;
+    -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    box-shadow: inset 0px 1px 0px 0px #f5978e;
+    background-color: #f24537;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #d02718;
+    color: white;
+    font: bold 1em / 1.5em "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+    text-shadow: 1px 1px 0px #810e05;
+}
+.valign{
+    vertical-align: middle !important;
+}
