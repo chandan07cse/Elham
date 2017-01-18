@@ -258,7 +258,7 @@ class UserSeeder extends AbstractSeed
 ```
 :small_blue_diamond: You'll be into the Psyshell now. If you wanna start toying around then first initialize the proper environment. To init the environment, run in terminal
 ```sh
- $enviornment = new Dotenv\Dotenv(__DIR__);
+ $environment = new Dotenv\Dotenv(__DIR__);
  $environment->load();
 ```
 :small_blue_diamond: To init the database with eloquent, run in terminal
