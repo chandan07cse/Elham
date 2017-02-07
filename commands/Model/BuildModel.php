@@ -47,7 +47,7 @@ class BuildModel extends Command{
             $modelTemplate = file_get_contents('commands/Model/template.php');
             $modelTemplate = rtrim($modelTemplate, "}");
             $modelTemplate = str_replace("YourModel",$ModelName,$modelTemplate);
-            $properties = " protected ";
+            $properties = "    protected ";
             foreach($cols as $property)
                 $properties .= "$".$property.', ';
 
@@ -55,7 +55,7 @@ class BuildModel extends Command{
 
             $modelTemplate .= $properties;
             foreach($cols as $col){
-                if($col!="id" && $col!="created_at" && $col!="updated_at"){
+                if($col!="created_at" && $col!="updated_at"){
                 $modelTemplate .= "
 
     public function set_".$col."($$col)
