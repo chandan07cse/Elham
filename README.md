@@ -3,8 +3,13 @@
 ### :beginner: Version 1.0.0
 ### :feet: Installation
 :small_blue_diamond: First install composer globally(if you don't have it) by running the following commands
+For Ubuntu
 ```sh
  curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
+```
+For Cent OS 
+```sh
+ curl -sS https://getcomposer.org/installer | php && chmod +x composer.phar && sudo mv composer.phar /usr/local/bin/composer
 ```
 :small_blue_diamond: Then install Elham by the following command(for latest stable releases)
 ```sh
