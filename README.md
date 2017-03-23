@@ -2,7 +2,7 @@
 :loudspeaker: Let's build together by not reinventing the wheel but assembling the wheels to reinvent a new :rocket:
 ### :beginner: Version 1.0.0
 ### :feet: Installation
-:small_blue_diamond: First install composer globally(if you don't have it) by running the following commands
+:small_blue_diamond: First install composer globally(if you don't have it) by running the following commands  
 For Ubuntu
 ```sh
  curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
