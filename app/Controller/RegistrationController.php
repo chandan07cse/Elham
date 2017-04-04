@@ -73,8 +73,8 @@ class RegistrationController extends BaseController{
                     $to = $email;
                     $subject = 'Testing Elham Email Through Swiftmailer';
                     $body = "Dear {$username}, Greetings from Elham";
-                    $template = "email/test.html";
-                    $templateData = ['name'=>$username,'email'=>base64_encode($to),'activation_code'=>$this->user->getActivationCodeByEmail()];
+                    $protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
+                    $templateData = ['name'=>$username,'protocol'=>$protocol,'host'=>$_SERVER['HTTP_HOST'],'email'=>base64_encode($to),'activation_code'=>$this->user->getActivationCodeByEmail()];
                     $attachment = '../public/images/'.$imageName;
                     $mail = $this->sendEmail(
                                                 $from,

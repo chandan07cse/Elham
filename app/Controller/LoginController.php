@@ -30,9 +30,14 @@ class LoginController extends BaseController{
         $this->user->setPassWord($password);
         if($this->user->checkExistenceForLogin())
         {
-            $this->session->start();
-            $this->session->set('email',$email);
-            $this->redirect('/user/dashboard')->setFlash('greeting','Welcome To Dashboard','alert alert-success text-center');
+            if(!$this->user->checkVerification())
+                $this->redirect('/user/login')->setFlash('greeting','Please Verify Your Email Address','alert alert-danger text-center');
+            else
+            {
+                $this->session->start();
+                $this->session->set('email',$email);
+                $this->redirect('/user/dashboard')->setFlash('greeting','Welcome To Dashboard','alert alert-success text-center');
+            }
         }
         else
             $this->redirect('/user/login')->setFlash('greeting','Wrong Credentials','alert alert-danger text-center');

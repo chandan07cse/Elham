@@ -37,9 +37,13 @@ For Cent OS
 - To check the visual dependencies, please go to the link [Visual Dependecies](https://www.versioneye.com/php/chandan07cse:elham/1.0.0/visual_dependencies)
 
 # :musical_keyboard: Elham Command Alias
-:small_blue_diamond: Let's run the below command to run elham command
+:small_blue_diamond: Let's run the below command to run elham command if you are in Linux
 ```sh
  echo "alias elham='./elham'" >> ~/.bash_aliases && source ~/.bash_aliases
+```
+:small_blue_diamond: But if you are in windows machine then run the following command in terminal(You can cetainly use [Laragon](https://laragon.org/))
+```sh
+ doskey elham=php ./elham $*
 ```
 :small_blue_diamond: Now you can run elham command through out your project. To check run from the terminal
 ```sh
