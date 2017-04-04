@@ -41,13 +41,18 @@ For Cent OS
 ```sh
  echo "alias elham='./elham'" >> ~/.bash_aliases && source ~/.bash_aliases
 ```
-:small_blue_diamond: But if you are in windows machine then run the following command in terminal(You can cetainly use [Laragon](https://laragon.org/))
+:small_blue_diamond: But if you are in windows machine add the executibles in your path. If you are using [Laragon](https://laragon.org) then it can be  
 ```sh
- doskey elham=php ./elham $*
+ C:\laragon\www\project_name\vendor\bin\;C:\laragon\www\project_name\;
 ```
-:small_blue_diamond: Now you can run elham command through out your project. To check run from the terminal
+
+:small_blue_diamond: Now you can run elham command through out your project. To check run from the terminal if you are in linux enviornment
 ```sh
  elham
+```
+:small_blue_diamond: But if you are in windows, then 
+```sh
+ php elham
 ```
 # :violin: Build Controller Through CLI
 :small_blue_diamond: Elham provides you the build:controller command
@@ -305,9 +310,13 @@ class UserSeeder extends AbstractSeed
 ```sh
  sudo apt-get install npm
 ```
-:small_blue_diamond: After that we need to install gulp globaly by the following command
+:small_blue_diamond: After that we need to install gulp globaly by the following command in ubuntu.
 ```sh
  sudo npm install -g gulp
+```
+:small_blue_diamond: But if you are in windows then in [Laragon](https://laragon.org) terminal type
+```sh
+  npm install -g gulp
 ```
 :small_blue_diamond: As pacakge.json already ships with Elham. So you don't have to create it. To install gulp just run the following command
 ```sh
@@ -316,11 +325,22 @@ class UserSeeder extends AbstractSeed
 :small_blue_diamond: The way Gulp work is - Everything is split into various plugins. So each plugin does one job & one job only. And that way we can pipe the output of one function to another. So we can say - Let's autoprefix this file & then minify it & then output it some file & then finally provide some sort of notifications. All of that stuff is really easy with Gulp.
 :small_blue_diamond: So if we want to use plugins, we need to install some.
 Lets install, just to get started, How about minifying our css
-We can do that by running into terminal
+We can do that by running into ubuntu terminal 
 ```sh
  sudo npm install gulp-clean-css --save-dev
 ```
-
+:small_blue_diamond: For windows run 
+```sh
+ npm install gulp-clean-css --save-dev
+```
+:small_blue_diamond: Now if you wanna minifying the js then in ubuntu terminal
+```sh
+sudo npm install gulp-jsmin --save-dev
+```
+:small_blue_diamond: But if you are in windows then run in [Laragon](https://laragon.org) terminal
+```sh
+ npm install gulp-jsmin --save-dev
+```
 # :strawberry: Elham Zero Second Deployment
 :small_blue_diamond: Elham proudly compatibles with [ngrok](https://ngrok.com/). So you can deploy it less than a second.
 For that you'll have to install node & nodejs-legacy by the following command
