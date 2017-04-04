@@ -62,6 +62,15 @@ class User extends Eloquent{
     {
         return User::where([['email',$this->getEmail()],['password',$this->getPassWord()]])->first();
     }
+
+    public function checkVerification()
+    {
+        $query = $this->pdo->prepare("select * from users where email=:email and active=1");
+        $query->execute([
+            ':email'=>$this->getEmail()
+        ]);
+        return $query->fetch(\PDO::FETCH_OBJ);
+    }
     public function insert()
     {
 //        $command = User::create([
