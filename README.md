@@ -322,6 +322,10 @@ class UserSeeder extends AbstractSeed
 ```sh
  sudo npm install gulp --save-dev
 ```
+:small_blue_diamond: But if you are in windows, then run 
+```sh
+ npm install gulp --save-dev
+```
 :small_blue_diamond: The way Gulp work is - Everything is split into various plugins. So each plugin does one job & one job only. And that way we can pipe the output of one function to another. So we can say - Let's autoprefix this file & then minify it & then output it some file & then finally provide some sort of notifications. All of that stuff is really easy with Gulp.
 :small_blue_diamond: So if we want to use plugins, we need to install some.
 Lets install, just to get started, How about minifying our css
