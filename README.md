@@ -327,6 +327,7 @@ class UserSeeder extends AbstractSeed
  npm install gulp --save-dev
 ```
 :small_blue_diamond: The way Gulp work is - Everything is split into various plugins. So each plugin does one job & one job only. And that way we can pipe the output of one function to another. So we can say - Let's autoprefix this file & then minify it & then output it some file & then finally provide some sort of notifications. All of that stuff is really easy with Gulp.
+
 :small_blue_diamond: So if we want to use plugins, we need to install some.
 Lets install, just to get started, How about minifying our css
 We can do that by running into ubuntu terminal 
@@ -344,6 +345,10 @@ sudo npm install gulp-jsmin --save-dev
 :small_blue_diamond: But if you are in windows then run in [Laragon](https://laragon.org) terminal
 ```sh
  npm install gulp-jsmin --save-dev
+```
+:small_blue_diamond: To use gulp, run from terminal
+```sh
+ gulp
 ```
 # :strawberry: Elham Zero Second Deployment
 :small_blue_diamond: Elham proudly compatibles with [ngrok](https://ngrok.com/). So you can deploy it less than a second.
