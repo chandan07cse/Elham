@@ -4,6 +4,7 @@ namespace Elham\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\Filesystem\Filesystem;
 use Philo\Blade\Blade;
 
 class BaseController
@@ -99,5 +100,10 @@ class BaseController
         foreach ($session->getFlashBag()->get($withKey, array()) as $values)
             $values = json_decode($values);
         return @$values;
+    }
+    public function removeFile($file_with_path)
+    {
+        $fs = new Filesystem();
+        $fs->remove($file_with_path);
     }
 }
