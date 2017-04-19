@@ -101,9 +101,10 @@ class BaseController
             $values = json_decode($values);
         return @$values;
     }
+
     public function removeFile($file_with_path)
     {
         $fs = new Filesystem();
-        $fs->remove($file_with_path);
+        $fs->remove(base64_decode($file_with_path));
     }
 }
