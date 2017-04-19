@@ -104,7 +104,6 @@ class BaseController
 
     public function removeFile($file_with_path)
     {
-        $fs = new Filesystem();
-        $fs->remove(base64_decode($file_with_path));
+        (new Filesystem())->remove(base64_decode($file_with_path));
     }
 }
