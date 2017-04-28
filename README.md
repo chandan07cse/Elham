@@ -314,6 +314,11 @@ class UserSeeder extends AbstractSeed
         $request_type = 'post';
         $api_response = $this->api($uri,$content_type,$request_parameter,$request_type);
 ```
+# :mag: Elham Vulnerability Scan
+:small_blue_diamond: To check any vulnerabilities package issue in Elham, just run the following command
+```sh
+ elham check:vulnerability
+```
  
 # :house_with_garden: Elham Frontend Housekeeping
 :small_blue_diamond: Elham uses [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command

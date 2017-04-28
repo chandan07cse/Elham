@@ -6,10 +6,12 @@ use commands\Controller\BuildController;
 use commands\Model\BuildModel;
 use commands\Validator\BuildValidator;
 use commands\Form\BuildForm;
+use commands\Vulnerability\CheckVulnerability;
 $app = new Application('Elham Framework','1.0.0');
 $app->add(new BuildController);
 $app->add(new BuildModel);
 $app->add(new BuildValidator);
 $app->add(new BuildForm);
+$app->add(new CheckVulnerability);
 $app->run();
 ?>
