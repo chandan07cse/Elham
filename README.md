@@ -315,7 +315,7 @@ class UserSeeder extends AbstractSeed
         $api_response = $this->api($uri,$content_type,$request_parameter,$request_type);
 ```
 # :mag: Elham Vulnerability Scan
-:small_blue_diamond: To check any vulnerabilities package issue in Elham, just run the following command
+:small_blue_diamond: To check any vulnerable package issue in Elham, just run the following command
 ```sh
  elham check:vulnerability
 ```
