@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Filesystem\Filesystem;
 use Philo\Blade\Blade;
-
+use Unirest;
 class BaseController
 {
     public function plainView(Request $request)
@@ -105,5 +105,11 @@ class BaseController
     public function removeFile($file_with_path)
     {
         (new Filesystem())->remove(base64_decode($file_with_path));
+    }
+
+    public function api($uri='https://api.spotify.com/v1/search',$content_type='application/json',$request_parameter=['q' => 'Frank sinatra', 'type' => 'track'],$request_type='get')
+    {
+        //Unirest\Request::verifyPeer(false); // Disables SSL cert validation
+        return Unirest\Request::$request_type($uri,['Accept' => $content_type], $request_parameter);
     }
 }

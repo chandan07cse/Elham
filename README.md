@@ -305,6 +305,16 @@ class UserSeeder extends AbstractSeed
 
 :small_blue_diamond: You can run every bit of eloquent & pdo queries along with other functionalities through [Psyshell](http://psysh.org/).
 
+# :calling: Elham API Call
+:small_blue_diamond: Elham uses [Unirest](http://unirest.io/php.html) libraries for its api calling. Its pretty easy to call an api using the Elham's api method like below
+```sh
+        $uri = 'http://mockbin.com/request';
+        $content_type = 'application/json';
+        $request_parameter = ['foo' => 'hello', 'bar' => 'world'];
+        $request_type = 'post';
+        $api_response = $this->api($uri,$content_type,$request_parameter,$request_type);
+```
+ 
 # :house_with_garden: Elham Frontend Housekeeping
 :small_blue_diamond: Elham uses [Gulp](http://gulpjs.com/) for basic front-end housekeeping of tasks like minifying css,js, autoprefixing of css and so on & so forth. To use gulp, first install node js by the following command
 ```sh
@@ -370,3 +380,4 @@ For that you'll have to install node & nodejs-legacy by the following command
 
 # :grapes: Elham Production Deployment
 :small_blue_diamond: Don't worry it also supports any repo(Github,Gitlab,Bitbucket....) and any CI (Jenkins) and any server(Linux Distro. preferred) in deployment.
+
