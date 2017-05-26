@@ -27,8 +27,7 @@
     "require-dev":{
         "fzaninotto/faker": "^1.6",
         "psy/psysh": "@stable",
-        "mashape/unirest-php": "3.*"
-    },
+        },
     "autoload":{
         "psr-4":{
                     "Elham\\": "app/",

@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Filesystem\Filesystem;
 use Philo\Blade\Blade;
 use Unirest;
+use Predis;
 class BaseController
 {
     public function plainView(Request $request)
@@ -111,5 +112,9 @@ class BaseController
     {
         //Unirest\Request::verifyPeer(false); // Disables SSL cert validation
         return Unirest\Request::$request_type($uri,['Accept' => $content_type], $request_parameter);
+    }
+    public function redis()
+    {
+        return new Predis\Client();
     }
 }
