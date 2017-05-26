@@ -6,7 +6,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Filesystem\Filesystem;
 use Philo\Blade\Blade;
-use Predis;
+//use Predis;
+//use Unirest;
 class BaseController
 {
     public function plainView(Request $request)
