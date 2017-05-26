@@ -26,7 +26,7 @@
     },
     "require-dev":{
         "fzaninotto/faker": "^1.6",
-        "psy/psysh": "@stable",
+        "psy/psysh": "@stable"
         },
     "autoload":{
         "psr-4":{
